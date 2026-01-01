@@ -60,15 +60,6 @@ Automated web-based tool for mangrove analysis with multi-index analysis (NDVI, 
 **Kuningan Flowlytics** → [Launch App](https://defaniarman.users.earthengine.app/view/hydrospectra)  
 Hydrological analysis and flow visualization for Kuningan region
 
-**LST Detection DEF** → [Launch App](https://defaniarman.users.earthengine.app/view/lst-detection-def)  
-Land Surface Temperature monitoring system
-
-**NDVI Analyze Tools** → [Launch App](https://defaniarman.users.earthengine.app/view/ndvi-analyze-tools-base-sentinel-2-surface-reflectance)  
-Vegetation analysis using Sentinel-2 Surface Reflectance
-
-**RAINFALL STAT** → [Launch App](https://defaniarman.users.earthengine.app/view/ranifall-stat)  
-Rainfall statistics and temporal pattern analysis
-
 **View all apps:** [defaniarman.users.earthengine.app](https://defaniarman.users.earthengine.app/)
 
 ---
