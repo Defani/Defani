@@ -17,13 +17,13 @@ I specialize in optical remote sensing and spatial analysis with a focus on carb
 
 ---
 
-## 🛠️ Tools & Technologies
+## 🛠️ Tools Used
 
 <table>
 <tr>
 <td align="center" width="96">
 <img src="https://earthengine.google.com/static/images/earth_engine_icon.png" width="48" height="48" alt="GEE" />
-<br>Google Earth Engine
+<br>GEE
 </td>
 <td align="center" width="96">
 <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Qgis-icon-3.0.png?20180304175057" width="48" height="48" alt="QGIS" />
@@ -40,14 +40,6 @@ I specialize in optical remote sensing and spatial analysis with a focus on carb
 <td align="center" width="96">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2560px-R_logo.svg.png" width="48" height="48" alt="R" />
 <br>R
-</td>
-<td align="center" width="96">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/RStudio_logo_flat.svg/1200px-RStudio_logo_flat.svg.png" width="48" height="48" alt="RStudio" />
-<br>RStudio
-</td>
-<td align="center" width="96">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkdgUkYVq9-UPHtkrQyNzA1t-hCdSG65-XYw&s" width="48" height="48" alt="Python" />
-<br>Python
 </td>
 </tr>
 </table>
