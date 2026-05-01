@@ -1,3 +1,6 @@
+<img width="1584" height="396" alt="White Minimalist Marketing Manager LinkedIn Banner" src="https://github.com/user-attachments/assets/b19682f9-6d39-48c6-a3c1-041b54abcf51" />
+
+
 # Defani Arman Alfitriansyah
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/defaniarmanalfitriansyah/)
@@ -16,9 +19,18 @@ I specialize in optical remote sensing and spatial analysis with a focus on carb
 **Current Research:** Developing a Google Earth Engine application for mangrove above-ground biomass monitoring in Subang Regency using Sentinel-2 indices and carbon stock estimation models.
 
 ---
-
+**Experince:**
+- GIS & RS Laboratory Assistant, Faculty of Forestry and Environmental Science, University of Kuningan, Indonesia 2025-2026
+- QGIS trainning mentor- Forum Pohon Langka Indonesia 2025
+- Remote Sensing Analyst- ORHL BRIN 2026-now
+- GIS & RS Content Creator 2025-now
+- Remote Sensing Analyst - Restoration Program at Bukit Pembarisan, Kuningan, West Java 2025
+- GIS & Remote Sensing Privat Tutor 2024-now
+- Social Forestry Facilitator, BPSKL Sumatera, KLHK, 2024
+- 
+  
 ## 🛠️ Tools Used
-
+---
 <table>
 <tr>
 <td align="center" width="96">
@@ -53,12 +65,14 @@ I specialize in optical remote sensing and spatial analysis with a focus on carb
 ---
 
 ## 🌐 WebGIS Applications
+<img width="1739" height="543" alt="Screenshot 2026-05-01 193259" src="https://github.com/user-attachments/assets/e323b867-35c5-4ac7-ab15-f1476c3598b4" />
 
-**Mangrove Spectral Index Detection | DEF-V1** → [Launch App](https://defaniarman.users.earthengine.app/view/mangrove-detec)  
-Automated web-based tool for mangrove analysis with multi-index analysis (NDVI, NDMI, EVI), interactive AOI selection, multi-temporal analysis, and GeoTIFF export
+**EE CHIRPS RainMapper** → [Launch App](https://defaniarman.users.earthengine.app/view/ee-chirps-rainmapper)  
 
-**Kuningan Flowlytics** → [Launch App](https://defaniarman.users.earthengine.app/view/hydrospectra)  
-Hydrological analysis and flow visualization for Kuningan region
+<img width="1730" height="397" alt="Screenshot 2026-05-01 193723" src="https://github.com/user-attachments/assets/5cf96b6c-1b84-44dc-89f8-f50911deeb11" />
+
+**EE CAIMAPPER** → [Launch App](https://defaniarman.users.earthengine.app/view/gee-caimapper)  
+
 
 **View all apps:** [defaniarman.users.earthengine.app](https://defaniarman.users.earthengine.app/)
 
@@ -70,15 +84,9 @@ Remote Sensing for Forestry • Carbon & Ecological Modeling • Mangrove Ecosys
 
 ---
 
-## ✍️ Technical Writing
-
 I regularly share research-based tutorials on remote sensing and geospatial analysis through **Medium**, **TikTok**, and **LinkedIn**.
 
-**Popular Topics:**
-- Land Use Classification using Random Forest in GEE
-- NDWI Analysis for water body detection
-- Mangrove Mapping with NDVI and MVI thresholds
-- Spatial Analysis of rainfall and terrain data
+
 
 ---
 
