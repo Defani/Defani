@@ -4,7 +4,7 @@
 
 # Defani Arman Alfitriansyah
 
-### 🌍 Geospatial Researcher | Remote Sensing Specialist | GIS Developer
+### Forester | Remote Sensing Analyst | Research Assistant
 
 *Mapping the future of forestry through open-source geospatial technology*
 
