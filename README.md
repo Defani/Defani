@@ -1,4 +1,4 @@
-<img width="1584" height="396" alt="White Minimalist Marketing Manager LinkedIn Banner" src="https://github.com/user-attachments/assets/b19682f9-6d39-48c6-a3c1-041b54abcf51" />
+<img width="1584" height="396" alt="White Minimalist Marketing Manager LinkedIn Banner" src="https://github.com/user-attachments/assets/94fb0da5-8926-4ef7-b320-fa8b05cddb4e" />
 
 <div align="center">
 
