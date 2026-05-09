@@ -47,7 +47,7 @@ I specialize in **optical remote sensing** and **spatial analysis** with a focus
 ---
 
 
----
+
 
 ## 🌐 WebGIS Applications
 
