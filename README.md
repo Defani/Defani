@@ -46,42 +46,6 @@ I specialize in **optical remote sensing** and **spatial analysis** with a focus
 
 ---
 
-## 🛠️ Tech Stack
-
-### Geospatial Tools
-<div align="center">
-<table>
-<tr>
-<td align="center" width="110">
-<img src="https://earthengine.google.com/static/images/earth_engine_icon.png" width="48" height="48" alt="Google Earth Engine" />
-<br><strong>Google Earth<br>Engine</strong>
-</td>
-<td align="center" width="110">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Qgis-icon-3.0.png?20180304175057" width="48" height="48" alt="QGIS" />
-<br><strong>QGIS</strong>
-</td>
-<td align="center" width="110">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Colaboratory_SVG_Logo.svg/1200px-Google_Colaboratory_SVG_Logo.svg.png?20221103151432" width="48" height="48" alt="Google Colab" />
-<br><strong>Google<br>Colab</strong>
-</td>
-<td align="center" width="110">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png" width="48" height="48" alt="JavaScript" />
-<br><strong>JavaScript</strong>
-</td>
-<td align="center" width="110">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2560px-R_logo.svg.png" width="48" height="48" alt="R Programming" />
-<br><strong>R</strong>
-</td>
-</tr>
-</table>
-</div>
-
-### Programming & Libraries
-```
-Python:  GeoPandas • Rasterio • GDAL • Matplotlib • Contextily • Scikit-learn • ImageIO
-R:       terra • sf • raster • ggplot2 • leaflet
-Satellite Data: Sentinel-2 • Landsat • MODIS
-```
 
 ---
 
@@ -122,7 +86,7 @@ Carbon and ecological analysis mapper for forest monitoring.
 ✓ Sustainable Forest Management
 ```
 
----
+
 
 ## 📚 Content & Publications
 
