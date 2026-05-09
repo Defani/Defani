@@ -49,27 +49,7 @@ I specialize in **optical remote sensing** and **spatial analysis** with a focus
 
 
 
-## 🌐 WebGIS Applications
-
-### EE CHIRPS RainMapper
-<img width="100%" alt="EE CHIRPS RainMapper" src="https://github.com/user-attachments/assets/e323b867-35c5-4ac7-ab15-f1476c3598b4" />
-
-**[→ Launch App](https://defaniarman.users.earthengine.app/view/ee-chirps-rainmapper)**
-
-Real-time precipitation monitoring and analysis using CHIRPS satellite data.
-
----
-
-### EE CAIMAPPER
-<img width="100%" alt="EE CAIMAPPER" src="https://github.com/user-attachments/assets/5cf96b6c-1b84-44dc-89f8-f50911deeb11" />
-
-**[→ Launch App](https://defaniarman.users.earthengine.app/view/gee-caimapper)**
-
-Carbon and ecological analysis mapper for forest monitoring.
-
----
-
-### 🔗 Explore All Applications
+## 🌐Earth Engine APPS
 **Visit:** [defaniarman.users.earthengine.app](https://defaniarman.users.earthengine.app/)
 
 ---
