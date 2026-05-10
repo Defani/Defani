@@ -1,7 +1,10 @@
 <img width="1280" height="320" alt="0511-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/aab9ca39-dc89-4d95-8e0d-5b2dcb4b6073" />
 
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Consolas&weight=500&size=18&pause=3000&color=FFFFFF&center=true&vCenter=true&width=600&lines=>_+life+without+biodiversity+is+nothing...;>_+preserve+nature,+preserve+the+future..." alt="Typing Console" />
+</div>
 
-# Hi there! I'm Defani Arman Alfitriansyah 👋 <img src="https://komarev.com/ghpvc/?username=Defani&label=Profile%20Views&color=10b981&style=flat-square" alt="Views" valign="middle" /> <img src="https://img.shields.io/github/stars/Defani?style=flat-square&color=10b981&label=Total%20Stars" alt="Stars" valign="middle" /> <img src="https://img.shields.io/github/repos/Defani?style=flat-square&color=10b981&label=Total%20Repositories" alt="Repositories" valign="middle" />
+# <img src="https://readme-typing-svg.herokuapp.com?font=Segoe+UI&weight=700&size=32&pause=3000&color=FFFFFF&vCenter=true&width=630&lines=Hi+there!+I'm+Defani+Arman+Alfitriansyah" alt="Hi there! I'm Defani" valign="middle" /> 👋 <img src="https://komarev.com/ghpvc/?username=Defani&label=Profile%20Views&color=10b981&style=flat-square" alt="Views" valign="middle" /> <img src="https://img.shields.io/github/stars/Defani?style=flat-square&color=10b981&label=Total%20Stars" alt="Stars" valign="middle" />
 
 ### Forester | Remote Sensing Analyst | Research Assistant
 
