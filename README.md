@@ -38,9 +38,9 @@ I specialize in **optical remote sensing** and **spatial analysis** with a focus
 |------|--------------|--------|
 | **Remote Sensing Analyst** | ORHL BRIN | 2026–Present |
 | **GIS & Remote Sensing Content Creator** | Freelance | 2025–Present |
-| **GIS & RS Content Creator** | Forum Pohon Langka Indonesia | 2025–Present |
+| **QGIS Trainnet** | Forum Pohon Langka Indonesia| 2025 |
 | **GIS & RS Laboratory Assistant** | Universitas Kuningan | 2025–2026 |
-| **Remote Sensing Analyst** | Restoration Program, Bukit Pembarisan | 2025 |
+| **Remote Sensing Analyst** | Restoration Program, Bukit Pembarisan Forum Pohon Langka Indonesia| 2025 |
 | **GIS & Remote Sensing Tutor** | Private | 2024–Present |
 | **Social Forestry Facilitator** | BPSKL Sumatera, KLHK | 2024 |
 
