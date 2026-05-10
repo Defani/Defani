@@ -54,7 +54,7 @@
 ---
 ### 🔬 Research Interests
 ```bash
-# Terminal style interest tags
+
 $ research --focus "Remote sensing for forestry" \
            --focus "Forest carbon modeling" \
            --focus "Biomass estimation" \
