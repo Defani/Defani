@@ -29,7 +29,6 @@
 - 📚 Educating a community of 1k+ learners on GIS & Remote Sensing through digital platforms.
 
 **💼 Work Experience & Involvement:**
-- 📡 **Remote Sensing Analyst** @ ORHL BRIN *(2026–Present)*
 - 🔬 **Laboratory Assistant** @ Universitas Kuningan *(2025–2026)*
 - 👨‍🏫 **GIS & RS Tutor** @ Forum Pohon Langka Indonesia *(2025)*
 - 🤝 **Social Forestry Facilitator** @ BPSKL Sumatera, Ministry of Environment and Forestry *(2024)*
