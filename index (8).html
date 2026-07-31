@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Defani Arman Alfitriansyah — Forester &amp; Remote Sensing Analyst</title>
+<meta name="description" content="Forester, Remote Sensing Analyst, and Research Assistant working in mangrove biomass mapping, carbon stock modeling, and open-source geospatial tools.">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1117'/%3E%3Ctext x='8' y='42' font-family='monospace' font-size='30' fill='%233fb950'%3E%3E_%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Defani Arman Alfitriansyah — Forester &amp; Remote Sensing Analyst">
+<meta property="og:description" content="Final Year Forestry Student | Remote Sensing Analyst | Ecological Modeling & Forest Carbon Research | RasterViz QGIS plugin developer | Forest Data Analyst">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%230d1117'/%3E%3Ctext x='60' y='300' font-family='monospace' font-size='56' fill='%23e6edf3'%3EDefani Arman Alfitriansyah%3C/text%3E%3Ctext x='60' y='360' font-family='monospace' font-size='28' fill='%233fb950'%3EForester %7C Remote Sensing Analyst%3C/text%3E%3C/svg%3E">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Defani Arman Alfitriansyah">
+<meta name="twitter:description" content="Forester | Remote Sensing Analyst | Ecological Modeling & Forest Carbon Research">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d1117;
+    --panel:#161b22;
+    --line:#30363d;
+    --text:#e6edf3;
+    --dim:#8b949e;
+    --accent:#3fb950;
+  }
+  html[data-theme="light"]{
+    --bg:#ffffff;
+    --panel:#f6f8fa;
+    --line:#d0d7de;
+    --text:#1f2328;
+    --dim:#57606a;
+    --accent:#1a7f37;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'IBM Plex Mono', ui-monospace, Consolas, monospace;
+    line-height:1.6;
+    transition:background .15s ease, color .15s ease;
+    position:relative;
+    overflow-x:hidden;
+  }
+
+  /* animated gradient blobs */
+  .blob{
+    position:fixed; z-index:-2; border-radius:50%;
+    filter:blur(80px); opacity:0.28; pointer-events:none;
+    animation:drift 22s ease-in-out infinite alternate;
+  }
+  .blob.b1{ width:420px; height:420px; background:var(--accent); top:-120px; left:-100px; }
+  .blob.b2{ width:380px; height:380px; background:#3fa9f5; bottom:-140px; right:-100px; animation-duration:26s; }
+  @keyframes drift{
+    0%{ transform:translate(0,0) scale(1); }
+    100%{ transform:translate(40px,30px) scale(1.15); }
+  }
+
+  /* subtle grain */
+  body::after{
+    content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+    opacity:0.035; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  a{ color:inherit; text-decoration:none; }
+  .wrap{ max-width:840px; margin:0 auto; padding:0 20px; }
+
+  .cursor-blink{
+    display:inline-block; width:8px; height:1em; background:var(--accent);
+    margin-left:4px; vertical-align:-2px;
+    animation:blink 1s step-end infinite;
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  header{ padding:56px 0 32px; border-bottom:1px solid var(--line); position:relative; }
+  header .top-row{ display:flex; justify-content:space-between; align-items:flex-start; }
+  header .prompt{ color:var(--text); }
+  header .identity{ display:flex; align-items:center; gap:16px; margin-top:14px; }
+  header .avatar{
+    width:76px; height:76px; border-radius:50%;
+    object-fit:cover; flex-shrink:0;
+    border:2px solid var(--accent);
+    box-shadow:0 0 0 4px rgba(63,185,80,0.12), 0 0 20px rgba(63,185,80,0.25);
+  }
+  header h1{
+    font-size:1.6rem; margin:0 0 4px;
+    background:linear-gradient(90deg, var(--text) 0%, var(--accent) 50%, var(--text) 100%);
+    background-size:200% auto;
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:shimmer 6s linear infinite;
+  }
+  @keyframes shimmer{
+    0%{ background-position:0% center; }
+    100%{ background-position:200% center; }
+  }
+  header .role{ color:var(--dim); font-size:0.95rem; }
+
+  #theme-toggle{
+    display:flex; align-items:center; gap:6px;
+    border:1px solid var(--line);
+    background:var(--panel);
+    color:var(--text);
+    font-family:inherit;
+    font-size:0.78rem;
+    padding:6px 10px;
+    border-radius:6px;
+    cursor:pointer;
+  }
+  #theme-toggle:hover{ border-color:var(--accent); }
+
+  section{ padding:40px 0; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+  h2{ font-size:1rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--accent); margin:0 0 18px; }
+
+  p.lede{ color:var(--dim); font-size:0.92rem; max-width:70ch; }
+
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:12px; }
+
+  .card{
+    display:flex; flex-direction:column; align-items:flex-start; gap:8px;
+    border:1px solid rgba(255,255,255,0.14);
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-radius:14px;
+    padding:14px;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  html[data-theme="light"] .card{
+    border:1px solid rgba(0,0,0,0.10);
+    background:rgba(255,255,255,0.5);
+  }
+  a.card:hover{
+    border-color:var(--accent);
+    transform:translateY(-2px);
+  }
+  .card img.badge{ height:20px; border-radius:5px; overflow:hidden; }
+  .card .desc{ font-size:0.78rem; color:var(--dim); }
+
+  .stack-badges{ display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+  .stack-badges img{ height:20px; border-radius:5px; }
+
+  footer{ padding:32px 0; text-align:center; color:var(--dim); font-size:0.8rem; }
+</style>
+</head>
+<body>
+
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+
+<div class="wrap">
+
+<header>
+  <div class="top-row">
+    <div class="prompt">$ whoami<span class="cursor-blink"></span></div>
+    <button id="theme-toggle" onclick="toggleTheme()">
+      <span id="theme-icon">🌙</span><span id="theme-label">Dark</span>
+    </button>
+  </div>
+  <div class="identity">
+    <img class="avatar" src="profile.png" alt="Defani Arman Alfitriansyah">
+    <div>
+      <h1>Defani Arman Alfitriansyah</h1>
+      <div class="role">Forester | Remote Sensing Analyst | Research Assistant — Kuningan, Indonesia</div>
+    </div>
+  </div>
+  <div class="stack-badges">
+    <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy">
+    <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas">
+    <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-learn">
+    <img src="https://img.shields.io/badge/Rasterio-10b981?style=flat-square&logo=python&logoColor=white" alt="Rasterio">
+    <img src="https://img.shields.io/badge/Geemap-4285F4?style=flat-square&logo=googleearth&logoColor=white" alt="Geemap">
+    <img src="https://img.shields.io/badge/Cartopy-222222?style=flat-square&logo=python&logoColor=white" alt="Cartopy">
+    <img src="https://img.shields.io/badge/Matplotlib-11557c?style=flat-square&logo=python&logoColor=white" alt="Matplotlib">
+    <img src="https://img.shields.io/badge/Seaborn-3776AB?style=flat-square&logo=python&logoColor=white" alt="Seaborn">
+    <img src="https://img.shields.io/badge/PyQt5-41CD52?style=flat-square&logo=qt&logoColor=white" alt="PyQt5">
+    <img src="https://img.shields.io/badge/Tidyverse-276DC3?style=flat-square&logo=r&logoColor=white" alt="Tidyverse">
+    <img src="https://img.shields.io/badge/Caret-ff7f00?style=flat-square&logo=r&logoColor=white" alt="Caret">
+    <img src="https://img.shields.io/badge/Terra-4caf50?style=flat-square&logo=r&logoColor=white" alt="Terra">
+    <img src="https://img.shields.io/badge/Vegan-10b981?style=flat-square&logo=r&logoColor=white" alt="Vegan">
+    <img src="https://img.shields.io/badge/RStoolbox-0f4c75?style=flat-square&logo=r&logoColor=white" alt="RStoolbox">
+    <img src="https://img.shields.io/badge/ggplot2-276DC3?style=flat-square&logo=r&logoColor=white" alt="ggplot2">
+    <img src="https://img.shields.io/badge/JASP-335385?style=flat-square&logo=jasp&logoColor=white" alt="JASP">
+    <img src="https://img.shields.io/badge/QGIS-589632?style=flat-square&logo=qgis&logoColor=white" alt="QGIS">
+    <img src="https://img.shields.io/badge/ESA_SNAP-10b981?style=flat-square&logo=earthengine&logoColor=white" alt="ESA SNAP">
+    <img src="https://img.shields.io/badge/MaxEnt-8B4513?style=flat-square&logo=target&logoColor=white" alt="MaxEnt">
+    <img src="https://img.shields.io/badge/RStudio-75AADB?style=flat-square&logo=RStudio&logoColor=white" alt="RStudio">
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <h2>about</h2>
+  <p class="lede">Final Year Forestry Student | Remote Sensing Analyst | Ecological Modeling &amp; Forest Carbon Research | RasterViz QGIS plugin developer | Forest Data Analyst</p>
+  <p class="lede">640 plugin users · 3.2k LinkedIn followers · 3.4k+ TikTok followers · 128.8k TikTok viewers</p>
+</section>
+
+<section id="links" class="reveal">
+  <h2>links</h2>
+  <div class="grid">
+    <a class="card" href="https://linkedin.com/in/defaniarmanalfitriansyah" target="_blank" rel="noopener">
+      <img class="badge" src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
+      <span class="desc">Profil profesional</span>
+    </a>
+    <a class="card" href="https://medium.com/@defaniarman" target="_blank" rel="noopener">
+      <img class="badge" src="https://img.shields.io/badge/Medium-12100E?style=flat-square&logo=medium&logoColor=white" alt="Medium">
+      <span class="desc">Tulisan &amp; artikel</span>
+    </a>
+    <a class="card" href="https://tiktok.com/@defaniarman" target="_blank" rel="noopener">
+      <img class="badge" src="https://img.shields.io/badge/TikTok-000000?style=flat-square&logo=tiktok&logoColor=white" alt="TikTok">
+      <span class="desc">Konten singkat</span>
+    </a>
+    <a class="card" href="https://www.instagram.com/de.fanii" target="_blank" rel="noopener">
+      <img class="badge" src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white" alt="Instagram">
+      <span class="desc">Keseharian &amp; lapangan</span>
+    </a>
+    <a class="card" href="https://www.kaggle.com/defani123" target="_blank" rel="noopener">
+      <img class="badge" src="https://img.shields.io/badge/Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white" alt="Kaggle">
+      <span class="desc">Notebook &amp; dataset</span>
+    </a>
+    <a class="card" href="https://rpubs.com/defanii" target="_blank" rel="noopener">
+      <img class="badge" src="https://img.shields.io/badge/RPubs-75AADB?style=flat-square&logo=r&logoColor=white" alt="RPubs">
+      <span class="desc">Laporan analisis R</span>
+    </a>
+    <a class="card" href="https://www.behance.net/defaniarman" target="_blank" rel="noopener">
+      <img class="badge" src="https://img.shields.io/badge/Behance-1769FF?style=flat-square&logo=behance&logoColor=white" alt="Behance">
+      <span class="desc">Portofolio visual</span>
+    </a>
+    <a class="card" href="mailto:defaniarman@gmail.com">
+      <img class="badge" src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email">
+      <span class="desc">defaniarman@gmail.com</span>
+    </a>
+    <a class="card" href="https://plugins.qgis.org/plugins/author/Defani%2520Arman%2520Alfitriansyah/" target="_blank" rel="noopener">
+      <img class="badge" src="https://img.shields.io/badge/QGIS_Plugins-589632?style=flat-square&logo=qgis&logoColor=white" alt="QGIS Plugins">
+      <span class="desc">Author page — RasterViz</span>
+    </a>
+    <a class="card" href="https://drive.google.com/drive/folders/1NR23hEoSSn5nkFDDkqhZcHKpGfagF0t8?usp=sharing" target="_blank" rel="noopener">
+      <img class="badge" src="https://img.shields.io/badge/Google_Drive-4285F4?style=flat-square&logo=googledrive&logoColor=white" alt="Google Drive">
+      <span class="desc">Modul penginderaan jauh (cloud)</span>
+    </a>
+  </div>
+</section>
+
+<footer>life without biodiversity is nothing — preserve nature, preserve the future</footer>
+
+</div>
+
+<script>
+  function applyTheme(theme){
+    document.documentElement.setAttribute('data-theme', theme);
+    document.getElementById('theme-icon').textContent = theme === 'light' ? '☀️' : '🌙';
+    document.getElementById('theme-label').textContent = theme === 'light' ? 'Light' : 'Dark';
+    localStorage.setItem('theme', theme);
+  }
+  function toggleTheme(){
+    const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    applyTheme(current === 'light' ? 'dark' : 'light');
+  }
+  (function(){
+    const saved = localStorage.getItem('theme');
+    const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    applyTheme(saved || (prefersLight ? 'light' : 'dark'));
+  })();
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
