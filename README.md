@@ -8,7 +8,7 @@
 
 ### 🌲 Forester | 🌱 Ecology & Carbon | 🧬 Species Distribution Modeling
 
-*Advancing forestry, ecology, and carbon science through open-source geospatial technology.* 🌍
+*Forestry, ecology, and carbon science through open-source geospatial technology.* 🌍
 
 <div align="left">
   <a href="https://linkedin.com/in/defaniarmanalfitriansyah"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
