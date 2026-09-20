@@ -33,8 +33,8 @@
 - 📚 Educating a community of **5K+ followers** on ecology, carbon, and open-source GIS via **[@49s.lab](https://www.instagram.com/49s.lab)**.
 
 **💼 Work Experience & Involvement:**
-- 🌏 **GIS & RS Analyst** @ Redelong Institute, TFCA Program *(current)*
-- 🔬 **GIS Assistant** @ WWF Indonesia — Home-based, Aceh *(current)*
+- 🌏 **GISConsultan t** @ Redelong Institute, Rumah Berkelanjutan TFCA Program *(current)*
+- 🔬 **GIS Consultan PECI Program ** @ WWF Indonesia — Home-based, Aceh *(Start Sep -28-26)*
 - 🧪 **Laboratory Assistant** @ Universitas Kuningan *(2025–2026)*
 - 📡 **GIS & RS Tutor** @ Forum Pohon Langka Indonesia *(2025)*
 - 🌳 **Social Forestry Facilitator** @ BPSKL Sumatera, Ministry of Environment and Forestry *(2024)*
