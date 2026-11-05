@@ -11,6 +11,9 @@
     <loc>http://localhost:3000/plugins</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/webgis</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/expertise</loc>
   </url>
   <url>

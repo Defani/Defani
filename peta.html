@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peta lokasi kerja</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; background: #fff; }
+  body { font: 13px/1.4 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color: #111827; display: flex; flex-direction: column; }
+  #map { flex: 1; border-top: 2px solid #111827; border-bottom: 2px solid #111827; }
+  .caption { margin: 8px 2px 0; color: #4b5563; }
+  .caption b { color: #111827; }
+  .maplibregl-popup-content { font: 13px/1.4 ui-sans-serif, system-ui, sans-serif; padding: 10px 12px; }
+  .maplibregl-popup-content strong { display: block; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+<div id="map" role="region" aria-label="Peta lokasi kerja"></div>
+<p class="caption"><b>Gambar 2.</b> Lokasi kerja dan riset. Klik penanda untuk keterangan. Basemap © OpenFreeMap, data © OpenStreetMap contributors.</p>
+<script>
+// Places of work and research, as plain points (no personal data).
+const PLACES = {
+  type: "FeatureCollection",
+  features: [
+    { type: "Feature", geometry: { type: "Point", coordinates: [108.483, -6.976] },
+      properties: { name: "Kuningan, Jawa Barat", note: "Universitas Kuningan dan Taman Nasional Gunung Ciremai: riset karbon, survei biodiversitas, asisten laboratorium GIS." } },
+    { type: "Feature", geometry: { type: "Point", coordinates: [96.85, 4.62] },
+      properties: { name: "Dataran tinggi Gayo, Aceh", note: "Agroforestri: basis data GIS, WebGIS, dan sistem ketelusuran (traceability)." } },
+  ],
+};
+
+const map = new maplibregl.Map({
+  container: "map",
+  style: "https://tiles.openfreemap.org/styles/positron",
+  bounds: [[94.5, -8.5], [111.5, 6.5]],
+  fitBoundsOptions: { padding: 30 },
+  attributionControl: { compact: true },
+  cooperativeGestures: true,
+});
+map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+
+map.on("load", () => {
+  map.addSource("places", { type: "geojson", data: PLACES });
+  map.addLayer({
+    id: "places-halo", type: "circle", source: "places",
+    paint: { "circle-radius": 13, "circle-color": "#3b82f6", "circle-opacity": 0.18 },
+  });
+  map.addLayer({
+    id: "places", type: "circle", source: "places",
+    paint: { "circle-radius": 6, "circle-color": "#1d4ed8", "circle-stroke-color": "#fff", "circle-stroke-width": 2 },
+  });
+  map.on("click", "places", (e) => {
+    const p = e.features[0].properties;
+    new maplibregl.Popup({ offset: 10 })
+      .setLngLat(e.features[0].geometry.coordinates)
+      .setHTML(`<strong>${p.name}</strong>${p.note}`)
+      .addTo(map);
+  });
+  map.on("mouseenter", "places", () => (map.getCanvas().style.cursor = "pointer"));
+  map.on("mouseleave", "places", () => (map.getCanvas().style.cursor = ""));
+});
+</script>
+</body>
+</html>

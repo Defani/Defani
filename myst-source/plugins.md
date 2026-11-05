@@ -2,6 +2,14 @@
 
 Plugin yang saya buat untuk GeoLibre, aplikasi GIS open-source yang berjalan di browser.
 
+## Statistik pengguna
+
+Data diambil langsung dari registri plugin GeoLibre setiap kali halaman ini dibuka.
+
+:::{iframe} /plugin-stats.html
+:width: 100%
+:::
+
 ## Layout Composer
 
 ![Antarmuka Layout Composer](assets/projects/layout-composer.png)

@@ -1,5 +1,11 @@
 # Defani Arman Alfitriansyah
 
+:::{image} assets/profile.png
+:alt: Foto Defani Arman Alfitriansyah
+:width: 180px
+:align: left
+:::
+
 Lulusan Kehutanan dengan spesialisasi penginderaan jauh, pemodelan karbon hutan, pemodelan ekologi, dan teknologi geospasial berbasis cloud untuk aplikasi lingkungan.
 
 Saat ini saya bekerja di bidang agroforestri, membangun basis data GIS dan sistem WebGIS untuk mendukung pengelolaan data spasial, pemantauan, dan ketelusuran (traceability). Pekerjaan saya mencakup pengembangan dataset spasial, pengolahan dan analisis data geospasial, serta pembuatan peta dan visualisasi untuk mendukung keputusan kehutanan dan lingkungan.
@@ -12,6 +18,23 @@ Plugin QGIS saya, **RasterViz**, untuk visualisasi raster bergaya Matplotlib tan
 
 Saya membagikan tutorial GIS, penginderaan jauh, dan geospasial open-source di Instagram [@49s.lab](https://www.instagram.com/49s.lab) (6K+ pengikut). Saya hanya bekerja dengan perangkat lunak open-source dan terbuka untuk kolaborasi di bidang karbon hutan, keberlanjutan, EUDR, dan sistem ketelusuran berbasis GIS.
 
-![Hutan mangrove Langsa, Aceh](assets/hutan-mangrove-sumatera.jpg)
 
-Foto: "Hutan Mangrove Sumatera" oleh M. Wildan Faris, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons.
+## Peta lokasi kerja
+
+:::{iframe} /peta.html
+:width: 100%
+:::
+
+## Data langsung
+
+:::{iframe} /live-widgets.html
+:width: 100%
+:::
+
+## Kehilangan tutupan pohon di Indonesia
+
+:::{iframe} https://www.globalforestwatch.org/embed/widget/treeLoss/country/IDN
+:width: 100%
+:::
+
+Sumber: [Global Forest Watch](https://www.globalforestwatch.org/dashboards/country/IDN/), data Hansen/UMD/Google/USGS/NASA.

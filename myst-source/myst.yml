@@ -8,6 +8,7 @@ project:
     - file: index.md
     - file: projects.md
     - file: plugins.md
+    - file: webgis.md
     - file: expertise.md
     - file: tools.md
     - file: modul.md
