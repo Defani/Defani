@@ -1,39 +1,41 @@
-# Proyek unggulan
+# Featured projects
 
-Kumpulan repositori dan alat untuk penginderaan jauh, GIS, dan analisis geospasial.
+**English** · [Bahasa Indonesia](id/projects.md)
 
-## RasterViz (plugin QGIS)
+Repositories and tools for remote sensing, GIS, and geospatial analysis.
 
-Rendering raster berkualitas publikasi, dibangun dengan PyQGIS, Matplotlib, dan PyQt5.
+## RasterViz (QGIS plugin)
 
-Python · QGIS · Matplotlib
+Publication-quality raster rendering built with [PyQGIS](https://docs.qgis.org/latest/en/docs/pyqgis_developer_cookbook/), [Matplotlib](https://github.com/matplotlib/matplotlib), and [PyQt5](https://riverbankcomputing.com/software/pyqt/).
+
+[Python](https://www.python.org) · [QGIS](https://github.com/qgis/QGIS) · [Matplotlib](https://github.com/matplotlib/matplotlib)
 
 ## EE Spectral Exploration
 
-Aplikasi Google Earth Engine untuk menghitung indeks vegetasi multi-sensor, thresholding, dan statistik luas area.
+A [Google Earth Engine](https://earthengine.google.com) app for multi-sensor vegetation index computation, thresholding, and area statistics.
 
-JavaScript · Earth Engine API
+[JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) · [Earth Engine API](https://github.com/google/earthengine-api)
 
 ## GEEDEF LULC Tools
 
-Klasifikasi tutupan lahan interaktif berbasis cloud di GEE Code Editor untuk pemetaan terbimbing.
+Cloud-based, interactive land cover classification in the GEE Code Editor for supervised mapping.
 
-JavaScript · Random Forest
+[JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) · Random Forest
 
 ## MapBiomas ID Col 3.0 QML
 
-Pustaka style QGIS yang memetakan nilai piksel langsung ke pedoman resmi MapBiomas.
+A [QGIS](https://github.com/qgis/QGIS) style library that maps pixel values directly to the official MapBiomas guidelines.
 
-QGIS · QML · Kartografi
+[QGIS](https://github.com/qgis/QGIS) · QML · Cartography
 
 ## Simple Plots
 
-Pembuat grafik berbasis web tanpa backend untuk figur siap publikasi, dengan ekspor PNG dan SVG.
+A backend-free web chart builder for publication-ready figures, with PNG and SVG export.
 
-HTML · CSS · JavaScript · Plotly.js
+HTML · CSS · [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) · [Plotly.js](https://github.com/plotly/plotly.js)
 
 ## EE CHIRPS RainMapper
 
-WebGIS analisis curah hujan berbasis dataset CHIRPS (sekitar 5 km), dengan area kajian kustom, grafik tren, dan ekspor GeoTIFF.
+A rainfall analysis WebGIS on the CHIRPS dataset (about 5 km), with a custom area of interest, trend charts, and GeoTIFF export.
 
-JavaScript · Aplikasi Earth Engine
+[JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) · Earth Engine Apps

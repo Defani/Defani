@@ -1,40 +1,62 @@
 # Defani Arman Alfitriansyah
 
+**English** · [Bahasa Indonesia](id/index.md)
+
+::::{tip} New book: Panduan Praktis SQL DuckDB di GeoLibre
+:::{image} assets/cover-sql-duckdb.png
+:alt: Cover of the book Panduan Praktis SQL DuckDB di GeoLibre
+:width: 150px
+:align: left
+:::
+I have just published a book! Learn spatial SQL from scratch in plain language, practising in GeoLibre, which is free and open source. 420 pages, 26 chapters, 147 SQL examples, real data from Kuningan and West Java. Ebook in PDF + EPUB, written in Indonesian.
+
+**Rp85,000** · [Buy on Mayar](https://modul-gis-defani.myr.id/ebook/tpanduan-praktis-sql-duckdb-di-geolibre) · [Read a sample](/reader.html?file=/perpus/sampel-sql-duckdb-geolibre.pdf&title=Panduan%20Praktis%20SQL%20DuckDB%20di%20GeoLibre%20%28sample%29) · [Details](modul.md)
+::::
+
 :::{image} assets/profile.png
 :alt: Foto Defani Arman Alfitriansyah
 :width: 180px
 :align: left
 :::
 
-Lulusan Kehutanan dengan spesialisasi penginderaan jauh, pemodelan karbon hutan, pemodelan ekologi, dan teknologi geospasial berbasis cloud untuk aplikasi lingkungan.
+I'm a Forestry graduate specializing in remote sensing, forest carbon modeling, ecological modeling, and cloud-based geospatial technology for environmental applications.
 
-Saat ini saya bekerja di bidang agroforestri, membangun basis data GIS dan sistem WebGIS untuk mendukung pengelolaan data spasial, pemantauan, dan ketelusuran (traceability). Pekerjaan saya mencakup pengembangan dataset spasial, pengolahan dan analisis data geospasial, serta pembuatan peta dan visualisasi untuk mendukung keputusan kehutanan dan lingkungan.
+I'm now working in agroforestry, building GIS databases and WebGIS systems to support spatial data management, monitoring, and traceability. My work covers developing spatial datasets, processing and analyzing geospatial data, and producing maps and visualizations that support forest and environmental decision-making.
 
-Latar belakang riset saya berpusat pada penilaian karbon hutan, pemodelan biomassa, dan analisis spektral Sentinel-2, dengan Google Earth Engine dan ekosistem Python open-source (geemap, cartoee, cartopy, scikit-learn, pandas, matplotlib, Google Colab).
+My research background centers on forest carbon assessment, biomass modeling, and Sentinel-2 spectral analysis, using [Google Earth Engine](https://earthengine.google.com) and an open-source [Python](https://www.python.org) ecosystem ([geemap](https://github.com/gee-community/geemap), [cartoee](https://geemap.org/cartoee/), [cartopy](https://github.com/SciTools/cartopy), [scikit-learn](https://github.com/scikit-learn/scikit-learn), [pandas](https://github.com/pandas-dev/pandas), [matplotlib](https://github.com/matplotlib/matplotlib), [Google Colab](https://colab.research.google.com)).
 
-Saya juga menjadi Asisten Laboratorium GIS & Pemodelan Spasial, membimbing mahasiswa dalam GIS, penginderaan jauh, Google Earth Engine, dan analisis spasial berbasis Python.
+I also serve as a GIS & Spatial Modeling Laboratory Assistant, mentoring students in GIS, remote sensing, Google Earth Engine, and Python-based spatial analysis.
 
-Plugin QGIS saya, **RasterViz**, untuk visualisasi raster bergaya Matplotlib tanpa coding, dipakai lebih dari 1.300 pengguna di seluruh dunia. Saya juga membuat plugin GeoLibre: Layout Composer dan iNaturalist Extractor.
+I build open-source geospatial tools: **RasterViz**, a QGIS plugin for Matplotlib-style raster visualization without coding, used by 1,300+ users worldwide, and the GeoLibre plugins Layout Composer, GBIF Data and iNaturalist Extractor.
 
-Saya membagikan tutorial GIS, penginderaan jauh, dan geospasial open-source di Instagram [@49s.lab](https://www.instagram.com/49s.lab) (6K+ pengikut). Saya hanya bekerja dengan perangkat lunak open-source dan terbuka untuk kolaborasi di bidang karbon hutan, keberlanjutan, EUDR, dan sistem ketelusuran berbasis GIS.
+As a content creator on Instagram ([@49s.lab](https://www.instagram.com/49s.lab), 6K+ followers), I share practical GIS, remote sensing, and open-source geospatial tutorials. I work with open-source software only, and I'm open to collaboration on forest carbon, sustainability, EUDR, and GIS-based traceability systems.
 
-
-## Peta lokasi kerja
+## Where I work
 
 :::{iframe} /peta.html
 :width: 100%
 :::
 
-## Data langsung
+## Live data
 
 :::{iframe} /live-widgets.html
 :width: 100%
 :::
 
-## Kehilangan tutupan pohon di Indonesia
+## Tree cover loss in Indonesia
 
 :::{iframe} https://www.globalforestwatch.org/embed/widget/treeLoss/country/IDN
 :width: 100%
 :::
 
-Sumber: [Global Forest Watch](https://www.globalforestwatch.org/dashboards/country/IDN/), data Hansen/UMD/Google/USGS/NASA.
+Source: [Global Forest Watch](https://www.globalforestwatch.org/dashboards/country/IDN/), data by Hansen/UMD/Google/USGS/NASA.
+
+:::{aside}
+![Cover of the SQL DuckDB in GeoLibre book](assets/cover-sql-duckdb.png)
+
+**New book: Panduan Praktis SQL DuckDB di GeoLibre**
+
+Rp85,000 · PDF + EPUB · 420 pages
+
+[Buy on Mayar](https://modul-gis-defani.myr.id/ebook/tpanduan-praktis-sql-duckdb-di-geolibre) · [Read a sample](/reader.html?file=/perpus/sampel-sql-duckdb-geolibre.pdf&title=Panduan%20Praktis%20SQL%20DuckDB%20di%20GeoLibre%20%28sample%29)
+:::

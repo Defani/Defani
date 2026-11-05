@@ -3,181 +3,271 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Info langsung</title>
+<title>Data langsung</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=block" rel="stylesheet">
 <style>
-  :root { --link: #1d4ed8; --primary: #3b82f6; --surface: #f3f4f6; --border: #e5e7eb; --text: #111827; --muted: #4b5563; --accent-surface: #eff6ff; }
+  :root { --link: #1d4ed8; --border: #e5e7eb; --text: #111827; --muted: #4b5563; }
   * { box-sizing: border-box; }
   html, body { margin: 0; height: 100%; background: #fff; color: var(--text); }
-  body { font: 14px/1.4 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; padding: 4px; }
-  /* Booktabs-style table: heavy top and bottom rules, light rules inside. */
-  .wrap { display: flex; flex-direction: column; height: 100%; }
+  body { font: 13px/1.35 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; padding: 2px; overflow: auto; }
+  .wrap { display: flex; flex-direction: column; min-height: 100%; }
+  /* Booktabs-style table: heavy rules top and bottom, light rules inside. */
   .grid {
-    flex: 1; display: grid; grid-template-columns: 1fr 1fr;
+    flex: 1; display: grid; grid-template-columns: repeat(3, 1fr);
     border-top: 2px solid var(--text); border-bottom: 2px solid var(--text);
   }
-  .card {
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 14px 16px;
-    opacity: 0; transform: translateY(6px); animation: rise .5s ease forwards;
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .cell {
+    padding: 10px 12px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 3px;
+    opacity: 0; transform: translateY(5px); animation: rise .45s ease forwards;
   }
-  .card:nth-child(odd) { border-right: 1px solid var(--border); }
-  .card:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
-  .card:nth-child(2) { animation-delay: .08s; }
-  .card:nth-child(3) { animation-delay: .16s; }
-  .card:nth-child(4) { animation-delay: .24s; }
+  .cell:nth-child(2) { animation-delay: .05s; } .cell:nth-child(3) { animation-delay: .1s; }
+  .cell:nth-child(4) { animation-delay: .15s; } .cell:nth-child(5) { animation-delay: .2s; } .cell:nth-child(6) { animation-delay: .25s; }
   @keyframes rise { to { opacity: 1; transform: none; } }
-  .head { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 13px; font-weight: 600; }
-  .icon { font-family: "Material Symbols Outlined"; font-size: 18px; line-height: 1; color: var(--link); }
-  .value { font-size: clamp(22px, 5vw, 32px); font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; margin: 8px 0 2px; }
-  .caption { font-size: 13px; color: var(--muted); margin: 8px 2px 0; }
+  .head { display: flex; align-items: center; gap: 5px; color: var(--muted); font-size: 12px; font-weight: 600; }
+  .icon { font-family: "Material Symbols Outlined"; font-size: 17px; line-height: 1; color: var(--link); }
+  .value { font-size: clamp(18px, 3.4vw, 24px); font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+  .sub { font-size: 11.5px; color: var(--muted); }
+  .sub a, .sub button { color: var(--link); }
+  .sub button { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; text-decoration: underline; }
+  select { font: inherit; font-size: 11.5px; padding: 1px 2px; border: 1px solid var(--border); border-radius: 4px; background: #fff; color: var(--text); max-width: 100%; }
+  .prayers { display: grid; grid-template-columns: repeat(3, auto); gap: 1px 10px; font-size: 11.5px; font-variant-numeric: tabular-nums; }
+  .prayers .next { color: var(--link); font-weight: 700; }
+  .caption { font-size: 12px; color: var(--muted); margin: 6px 2px 0; }
   .caption b { color: var(--text); }
-  .sub { font-size: 12.5px; color: var(--muted); }
-  .sub a { color: var(--link); }
-  .spin { animation: spin 1.2s linear infinite; display: inline-block; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  @media (prefers-reduced-motion: reduce) {
-    .card { animation: none; opacity: 1; transform: none; transition: none; }
-    .spin { animation: none; }
-  }
+  @media (prefers-reduced-motion: reduce) { .cell { animation: none; opacity: 1; transform: none; } }
+  html.dark { --link: #93c5fd; --border: #334155; --text: #e5e7eb; --muted: #9ca3af; }
+  html.dark, html.dark body { background: #0f172a; }
+  html.dark select { background: #1e293b; }
 </style>
+<script>
+// Follow the site's light or dark theme (the MyST page sets class="dark" on <html>).
+(function () {
+  function sync() { try { document.documentElement.classList.toggle("dark", parent.document.documentElement.classList.contains("dark")); } catch (e) {} }
+  sync();
+  try { new MutationObserver(sync).observe(parent.document.documentElement, { attributes: true, attributeFilter: ["class"] }); } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <div class="wrap">
 <div class="grid">
-  <div class="card">
+  <div class="cell">
     <div class="head"><span class="icon" aria-hidden="true">currency_exchange</span>Kurs USD ke Rupiah</div>
     <div class="value" id="fx">…</div>
     <div class="sub" id="fx-sub">Memuat…</div>
   </div>
-  <div class="card">
-    <div class="head"><span class="icon" id="wx-icon" aria-hidden="true">partly_cloudy_day</span>Cuaca Kuningan</div>
+  <div class="cell">
+    <div class="head"><span class="icon" id="wx-icon" aria-hidden="true">partly_cloudy_day</span><span id="wx-title">Cuaca</span></div>
     <div class="value" id="wx">…</div>
     <div class="sub" id="wx-sub">Memuat…</div>
   </div>
-  <div class="card">
-    <div class="head"><span class="icon" aria-hidden="true">schedule</span>Waktu di Kuningan</div>
-    <div class="value" id="clock">--:--:--</div>
-    <div class="sub" id="date">WIB (UTC+7)</div>
+  <div class="cell">
+    <div class="head"><span class="icon" aria-hidden="true">calendar_month</span>Waktu dan kalender</div>
+    <div class="value" id="clock">--.--.--</div>
+    <div class="sub" id="cal-masehi"></div>
+    <div class="sub" id="cal-hijri"></div>
+    <div class="sub" id="cal-jawa"></div>
   </div>
-  <div class="card">
+  <div class="cell">
+    <div class="head"><span class="icon" aria-hidden="true">mosque</span>Waktu salat</div>
+    <select id="city" aria-label="Kota"></select>
+    <div class="prayers" id="prayers">Memuat…</div>
+  </div>
+  <div class="cell">
+    <div class="head"><span class="icon" aria-hidden="true">star</span>Star GitHub</div>
+    <div class="value" id="stars">…</div>
+    <div class="sub" id="stars-sub">Memuat…</div>
+  </div>
+  <div class="cell">
     <div class="head"><span class="icon" aria-hidden="true">extension</span>Pengguna plugin GeoLibre</div>
     <div class="value" id="users">…</div>
     <div class="sub" id="users-sub">Memuat…</div>
   </div>
 </div>
-<p class="caption"><b>Tabel 1.</b> Data langsung, diambil setiap kali halaman dibuka.</p>
+<p class="caption"><b>Tabel 1.</b> Data langsung dari ExchangeRate-API, Open-Meteo, Aladhan (metode Kemenag RI), GitHub, dan registri plugin GeoLibre.</p>
 </div>
 
 <script>
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const fmt = (n, d = 0) => n.toLocaleString("id-ID", { minimumFractionDigits: d, maximumFractionDigits: d });
+const $ = (id) => document.getElementById(id);
 
-// Count a number up to its value; jumps straight to it when motion is reduced.
-function countUp(el, to, { prefix = "", suffix = "", decimals = 0, ms = 900 } = {}) {
+// English unless the page that embeds this table is an Indonesian page (/id/...).
+const EN = (() => { try { return !parent.location.pathname.startsWith("/id"); } catch (e) { return false; } })();
+const LOC = EN ? "en-GB" : "id-ID";
+// Indonesian text as written in this file, and its English; longer phrases first.
+const DICT = [
+  ["Kurs USD ke Rupiah", "USD to Rupiah"], ["Waktu dan kalender", "Time and calendar"], ["Waktu salat", "Prayer times"],
+  ["Star GitHub", "GitHub stars"], ["Pengguna plugin GeoLibre", "GeoLibre plugin users"], ["Memuat…", "Loading…"],
+  ["Pakai lokasi saya", "Use my location"], ["Mencari lokasi…", "Finding your location…"], ["lokasi Anda", "your location"],
+  ["Cerah berawan", "Mostly clear"], ["Berawan sebagian", "Partly cloudy"], ["Berawan", "Cloudy"], ["Cerah", "Clear"],
+  ["Berkabut", "Foggy"], ["Gerimis lebat", "Heavy drizzle"], ["Gerimis", "Drizzle"], ["Hujan ringan", "Light rain"],
+  ["Hujan lebat", "Heavy rain"], ["Hujan lokal", "Showers"], ["Hujan deras", "Downpour"], ["Badai petir", "Thunderstorm"], ["Hujan", "Rain"],
+  ["Cuaca ", "Weather in "], ["Cuaca", "Weather"], ["lembap", "humidity"], ["diperbarui", "updated"], ["(kalender Jawa)", "(Javanese calendar)"],
+  ["repositori ·", "repositories ·"], ["terbanyak", "most starred"], ["minggu ini", "this week"], ["registri", "registry"],
+  ["Jadwal belum bisa dimuat.", "Prayer times could not be loaded."], ["belum bisa dimuat.", "could not be loaded."],
+  ["Tabel 1.", "Table 1."], ["Data langsung dari", "Live data from"], ["metode Kemenag RI", "Indonesian Ministry of Religious Affairs method"],
+  ["registri plugin GeoLibre", "the GeoLibre plugin registry"], [", dan ", ", and "], ["Subuh", "Fajr"], ["Zuhur", "Dhuhr"], ["Asar", "Asr"],
+  ["Magrib", "Maghrib"], ["Isya", "Isha"], ["Kota", "City"],
+];
+// Text this function wrote itself is remembered, so the observer never translates it twice.
+const done = new WeakMap();
+function translate(root) {
+  if (!EN) return;
+  const walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  for (let n = walk.nextNode(); n; n = walk.nextNode()) {
+    const t = n.nodeValue;
+    if (done.get(n) === t) continue;
+    let out = t;
+    for (const [id, en] of DICT) if (out.includes(id)) out = out.split(id).join(en);
+    done.set(n, out);
+    if (out !== t) n.nodeValue = out;
+  }
+}
+if (EN) {
+  document.documentElement.lang = "en";
+  translate(document.body);
+  new MutationObserver((ms) => ms.forEach((m) => translate(m.target.nodeType === 3 ? m.target.parentNode : m.target)))
+    .observe(document.body, { childList: true, subtree: true, characterData: true });
+}
+
+function countUp(el, to, { prefix = "", suffix = "", decimals = 0, ms = 800 } = {}) {
+  const from = Number(el.dataset.v || 0);
+  el.dataset.v = to;
   if (reduce) { el.textContent = prefix + fmt(to, decimals) + suffix; return; }
   const t0 = performance.now();
   const step = (t) => {
-    const k = Math.min(1, (t - t0) / ms);
-    const eased = 1 - Math.pow(1 - k, 3);
-    el.textContent = prefix + fmt(to * eased, decimals) + suffix;
+    const k = Math.min(1, (t - t0) / ms), e = 1 - Math.pow(1 - k, 3);
+    el.textContent = prefix + fmt(from + (to - from) * e, decimals) + suffix;
     if (k < 1) requestAnimationFrame(step);
   };
   requestAnimationFrame(step);
 }
 
-// Exchange rate: open.er-api.com (free, no key, daily update).
-fetch("https://open.er-api.com/v6/latest/USD")
-  .then((r) => r.json())
-  .then((d) => {
-    countUp(document.getElementById("fx"), d.rates.IDR, { prefix: "Rp" });
-    const when = new Date(d.time_last_update_utc).toLocaleDateString("id-ID", { dateStyle: "medium" });
-    document.getElementById("fx-sub").innerHTML = `1 USD · diperbarui ${when} · <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">ExchangeRate-API</a>`;
-  })
-  .catch(() => { document.getElementById("fx").textContent = "–"; document.getElementById("fx-sub").textContent = "Kurs belum bisa dimuat."; });
+// 1. Exchange rate (daily).
+fetch("https://open.er-api.com/v6/latest/USD").then((r) => r.json()).then((d) => {
+  countUp($("fx"), d.rates.IDR, { prefix: "Rp" });
+  $("fx-sub").textContent = "1 USD · diperbarui " + new Date(d.time_last_update_utc).toLocaleDateString("id-ID", { dateStyle: "medium" });
+}).catch(() => { $("fx").textContent = "–"; $("fx-sub").textContent = "Kurs belum bisa dimuat."; });
 
-// Weather: Open-Meteo (free, no key). Kuningan, West Java.
-const WX = {
-  0: ["Cerah", "clear_day"], 1: ["Cerah berawan", "partly_cloudy_day"], 2: ["Berawan sebagian", "partly_cloudy_day"], 3: ["Berawan", "cloud"],
-  45: ["Berkabut", "foggy"], 48: ["Berkabut", "foggy"],
-  51: ["Gerimis", "rainy"], 53: ["Gerimis", "rainy"], 55: ["Gerimis lebat", "rainy"],
-  61: ["Hujan ringan", "rainy"], 63: ["Hujan", "rainy"], 65: ["Hujan lebat", "rainy"],
-  80: ["Hujan lokal", "rainy"], 81: ["Hujan lokal", "rainy"], 82: ["Hujan deras", "rainy"],
-  95: ["Badai petir", "thunderstorm"], 96: ["Badai petir", "thunderstorm"], 99: ["Badai petir", "thunderstorm"],
-};
-// The visitor's position when they have allowed it, else Kuningan. Coordinates go only
-// to Open-Meteo (weather) and BigDataCloud (place name); nothing is stored.
-const KUNINGAN = { lat: -6.98, lon: 108.48, name: "Kuningan" };
-const wxTitle = document.querySelector(".card:nth-child(2) .head");
+// 2. Weather at the visitor's position when allowed, else Takengon (Gayo).
+const WX = { 0: ["Cerah", "clear_day"], 1: ["Cerah berawan", "partly_cloudy_day"], 2: ["Berawan sebagian", "partly_cloudy_day"], 3: ["Berawan", "cloud"],
+  45: ["Berkabut", "foggy"], 48: ["Berkabut", "foggy"], 51: ["Gerimis", "rainy"], 53: ["Gerimis", "rainy"], 55: ["Gerimis lebat", "rainy"],
+  61: ["Hujan ringan", "rainy"], 63: ["Hujan", "rainy"], 65: ["Hujan lebat", "rainy"], 80: ["Hujan lokal", "rainy"], 81: ["Hujan lokal", "rainy"],
+  82: ["Hujan deras", "rainy"], 95: ["Badai petir", "thunderstorm"], 96: ["Badai petir", "thunderstorm"], 99: ["Badai petir", "thunderstorm"] };
+const DEFAULT_PLACE = { lat: 4.628, lon: 96.849, name: "Takengon" };
 
 async function placeName(lat, lon) {
   try {
-    const r = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=id`);
-    const d = await r.json();
-    return d.city || d.locality || d.principalSubdivision || "Lokasi Anda";
-  } catch {
-    return "Lokasi Anda";
-  }
+    const d = await (await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=id`)).json();
+    return d.city || d.locality || d.principalSubdivision || "lokasi Anda";
+  } catch { return "lokasi Anda"; }
 }
-
-async function showWeather({ lat, lon, name }, fromGps) {
+async function showWeather(p, fromGps) {
   try {
-    const r = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&timezone=auto`);
-    const c = (await r.json()).current;
+    const c = (await (await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${p.lat}&longitude=${p.lon}&current=temperature_2m,relative_humidity_2m,weather_code&timezone=auto`)).json()).current;
     const [label, icon] = WX[c.weather_code] || ["Cuaca", "partly_cloudy_day"];
-    document.getElementById("wx-icon").textContent = icon;
-    wxTitle.lastChild.textContent = `Cuaca ${name}`;
-    countUp(document.getElementById("wx"), c.temperature_2m, { suffix: "°C", decimals: 1 });
-    const ask = fromGps ? "" : ` · <a href="#" id="use-gps">Pakai lokasi saya</a>`;
-    document.getElementById("wx-sub").innerHTML = `${label} · lembap ${c.relative_humidity_2m}% · angin ${fmt(c.wind_speed_10m, 1)} km/j${ask}`;
-    document.getElementById("use-gps")?.addEventListener("click", (e) => { e.preventDefault(); askGps(); });
-  } catch {
-    document.getElementById("wx").textContent = "–";
-    document.getElementById("wx-sub").textContent = "Cuaca belum bisa dimuat.";
-  }
+    $("wx-icon").textContent = icon;
+    $("wx-title").textContent = `Cuaca ${p.name}`;
+    countUp($("wx"), c.temperature_2m, { suffix: "°C", decimals: 1 });
+    $("wx-sub").innerHTML = `${label} · lembap ${c.relative_humidity_2m}%` + (fromGps ? "" : ` · <button type="button" id="gps">Pakai lokasi saya</button>`);
+    $("gps")?.addEventListener("click", askGps);
+  } catch { $("wx").textContent = "–"; $("wx-sub").textContent = "Cuaca belum bisa dimuat."; }
 }
-
 function askGps() {
   if (!navigator.geolocation) return;
-  document.getElementById("wx-sub").textContent = "Mencari lokasi…";
-  navigator.geolocation.getCurrentPosition(
-    async (pos) => {
-      const { latitude: lat, longitude: lon } = pos.coords;
-      showWeather({ lat, lon, name: await placeName(lat, lon) }, true);
-    },
-    () => showWeather(KUNINGAN, false),
-    { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 },
-  );
+  $("wx-sub").textContent = "Mencari lokasi…";
+  navigator.geolocation.getCurrentPosition(async (pos) => {
+    const { latitude: lat, longitude: lon } = pos.coords;
+    const name = await placeName(lat, lon);
+    showWeather({ lat, lon, name }, true);
+    loadPrayers({ lat, lon, name });
+  }, () => showWeather(DEFAULT_PLACE, false), { timeout: 10000, maximumAge: 600000 });
 }
-
-// Use GPS straight away only when the visitor already granted it; otherwise offer it.
 (navigator.permissions?.query({ name: "geolocation" }) ?? Promise.reject())
-  .then((p) => (p.state === "granted" ? askGps() : showWeather(KUNINGAN, false)))
-  .catch(() => showWeather(KUNINGAN, false));
+  .then((p) => (p.state === "granted" ? askGps() : showWeather(DEFAULT_PLACE, false)))
+  .catch(() => showWeather(DEFAULT_PLACE, false));
 
-// Clock in Western Indonesia Time.
+// 3. Clock and calendars: Gregorian, Hijri (Intl islamic-umalqura) and Javanese (weekday + pasaran).
+const PASARAN = ["Legi", "Pahing", "Pon", "Wage", "Kliwon"];
+const REF = Date.UTC(1945, 7, 17); // 17 Agustus 1945 = Jumat Legi
 function tick() {
   const now = new Date();
-  document.getElementById("clock").textContent = now.toLocaleTimeString("id-ID", { timeZone: "Asia/Jakarta", hour12: false });
-  document.getElementById("date").textContent = now.toLocaleDateString("id-ID", { timeZone: "Asia/Jakarta", weekday: "long", day: "numeric", month: "long", year: "numeric" }) + " · WIB";
+  const tz = { timeZone: "Asia/Jakarta" };
+  $("clock").textContent = now.toLocaleTimeString(LOC, { ...tz, hour12: false }) + " WIB";
+  $("cal-masehi").textContent = now.toLocaleDateString(LOC, { ...tz, weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  $("cal-hijri").textContent = new Intl.DateTimeFormat(`${LOC}-u-ca-islamic-umalqura`, { ...tz, day: "numeric", month: "long", year: "numeric" }).format(now);
+  const [y, m, d] = now.toLocaleDateString("en-CA", tz).split("-").map(Number);
+  const days = Math.round((Date.UTC(y, m - 1, d) - REF) / 86400000);
+  const hari = now.toLocaleDateString("id-ID", { ...tz, weekday: "long" });
+  $("cal-jawa").textContent = `${hari} ${PASARAN[((days % 5) + 5) % 5]} (kalender Jawa)`;
 }
 tick();
 setInterval(tick, 1000);
 
-// Plugin users this week, from the GeoLibre plugin registry.
+// 4. Prayer times (Kemenag RI method) for Indonesian cities, or the visitor's position.
+const CITIES = ["Takengon", "Banda Aceh", "Medan", "Padang", "Pekanbaru", "Jambi", "Palembang", "Bengkulu", "Bandar Lampung", "Pangkal Pinang",
+  "Tanjung Pinang", "Jakarta", "Bandung", "Kuningan", "Semarang", "Yogyakarta", "Surabaya", "Serang", "Denpasar", "Mataram", "Kupang",
+  "Pontianak", "Palangka Raya", "Banjarmasin", "Samarinda", "Tanjung Selor", "Manado", "Palu", "Makassar", "Kendari", "Gorontalo",
+  "Mamuju", "Ambon", "Sofifi", "Jayapura", "Manokwari", "Sorong", "Merauke"];
+const NAMES = { Fajr: "Subuh", Dhuhr: "Zuhur", Asr: "Asar", Maghrib: "Magrib", Isha: "Isya", Sunrise: "Terbit" };
+const sel = $("city");
+for (const c of CITIES) sel.append(new Option(c, c));
+sel.addEventListener("change", () => loadPrayers({ city: sel.value }));
+
+async function loadPrayers(where) {
+  const url = where.city
+    ? `https://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(where.city)}&country=Indonesia&method=20`
+    : `https://api.aladhan.com/v1/timings?latitude=${where.lat}&longitude=${where.lon}&method=20`;
+  if (where.name && !where.city) {
+    if (![...sel.options].some((o) => o.value === "__gps")) sel.prepend(new Option(`${where.name} (lokasi Anda)`, "__gps"));
+    sel.value = "__gps";
+  }
+  try {
+    const t = (await (await fetch(url)).json()).data.timings;
+    // The five daily prayers.
+    const order = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
+    const now = new Date().toLocaleTimeString("en-GB", { hour12: false, timeZone: (await tzOf(where)) }).slice(0, 5);
+    const next = order.find((k) => t[k] > now) || "Fajr";
+    $("prayers").innerHTML = order.map((k) => `<span class="${k === next ? "next" : ""}">${NAMES[k]} ${t[k]}</span>`).join("");
+  } catch { $("prayers").textContent = "Jadwal belum bisa dimuat."; }
+}
+// Time zone of the selected place, so "next prayer" is right outside WIB.
+async function tzOf(where) {
+  const east = ["Jayapura", "Manokwari", "Sorong", "Merauke", "Ambon", "Sofifi"];
+  const central = ["Denpasar", "Mataram", "Kupang", "Banjarmasin", "Samarinda", "Tanjung Selor", "Manado", "Palu", "Makassar", "Kendari", "Gorontalo", "Mamuju"];
+  if (where.city) return east.includes(where.city) ? "Asia/Jayapura" : central.includes(where.city) ? "Asia/Makassar" : "Asia/Jakarta";
+  return Intl.DateTimeFormat().resolvedOptions().timeZone;
+}
+loadPrayers({ city: "Takengon" });
+
+// 5. GitHub stars across all public repositories.
+fetch("https://api.github.com/users/Defani/repos?per_page=100").then((r) => r.json()).then((repos) => {
+  const own = repos.filter((r) => !r.fork);
+  const stars = own.reduce((s, r) => s + r.stargazers_count, 0);
+  const top = own.slice().sort((a, b) => b.stargazers_count - a.stargazers_count)[0];
+  countUp($("stars"), stars);
+  $("stars-sub").innerHTML = `${own.length} repositori · terbanyak: <a href="${top.html_url}" target="_blank" rel="noopener">${top.name}</a>`;
+}).catch(() => { $("stars").textContent = "–"; $("stars-sub").textContent = "Data GitHub belum bisa dimuat."; });
+
+// 6. GeoLibre plugin users this week, refreshed every minute.
 const MINE = ["layout-composer", "geolibre-inaturalist-extractor", "geolibre-gbif-data"];
-fetch("https://plugins.geolibre.app/plugins/stats.json", { cache: "no-cache" })
-  .then((r) => r.json())
-  .then((d) => {
-    const rows = MINE.map((id) => d.plugins?.[id] || { usersThisWeek: 0, launches: 0 });
-    const users = rows.reduce((s, r) => s + (r.usersThisWeek || 0), 0);
+async function loadUsers() {
+  try {
+    const d = await (await fetch("https://plugins.geolibre.app/plugins/stats.json", { cache: "no-cache" })).json();
+    const rows = MINE.map((id) => d.plugins?.[id] || {});
+    countUp($("users"), rows.reduce((s, r) => s + (r.usersThisWeek || 0), 0));
     const launches = rows.reduce((s, r) => s + (r.launches || 0), 0);
-    countUp(document.getElementById("users"), users);
-    document.getElementById("users-sub").innerHTML = `minggu ini · ${fmt(launches)} total launch · <a href="https://plugins.geolibre.app" target="_blank" rel="noopener">registri GeoLibre</a>`;
-  })
-  .catch(() => { document.getElementById("users").textContent = "–"; document.getElementById("users-sub").textContent = "Data belum bisa dimuat."; });
+    const when = d.generated ? new Date(d.generated).toLocaleTimeString("id-ID", { hour: "2-digit", minute: "2-digit" }) : "";
+    $("users-sub").innerHTML = `minggu ini · ${fmt(launches)} launch · data ${when} · <a href="https://plugins.geolibre.app/plugins/" target="_blank" rel="noopener">registri</a>`;
+  } catch { $("users").textContent = "–"; $("users-sub").textContent = "Data belum bisa dimuat."; }
+}
+loadUsers();
+setInterval(loadUsers, 60000);
 </script>
 </body>
 </html>

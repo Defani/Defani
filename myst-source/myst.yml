@@ -1,19 +1,46 @@
 version: 1
 project:
   title: Defani Arman Alfitriansyah
-  description: Peneliti kehutanan, analis penginderaan jauh, dan asisten riset. Pemetaan biomassa mangrove, pemodelan stok karbon, dan alat geospasial open-source.
+  description: Forester and remote sensing analyst. Forest carbon modeling, GIS databases and WebGIS for agroforestry, and open-source geospatial tools.
   authors:
     - name: Defani Arman Alfitriansyah
   toc:
     - file: index.md
     - file: projects.md
+    - file: dashboard.md
     - file: plugins.md
+    - file: geolibre.md
     - file: webgis.md
+    - file: modul.md
+    - file: perpus.md
+    - file: panduan.md
+      children:
+        - pattern: panduan/*.md
+    - file: repositori.md
+      children:
+        - pattern: repos/alat/*.md
+    - file: tutorial.md
+      children:
+        - pattern: repos/tutorial/*.md
     - file: expertise.md
     - file: tools.md
-    - file: modul.md
-    - file: repositories.md
     - file: contact.md
+    - file: id/index.md
+      title: Bahasa Indonesia
+      children:
+        - file: id/projects.md
+        - file: id/dashboard.md
+        - file: id/plugins.md
+        - file: id/geolibre.md
+        - file: id/webgis.md
+        - file: id/modul.md
+        - file: id/perpus.md
+        - file: id/panduan.md
+        - file: id/repositori.md
+        - file: id/tutorial.md
+        - file: id/expertise.md
+        - file: id/tools.md
+        - file: id/contact.md
 site:
   template: book-theme
   options:

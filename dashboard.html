@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard GitHub</title>
+<style>
+  :root { --bg: #fff; --ink: #111; --muted: #555; --grid: #e5e7eb; --bar: #1d4ed8; --bar2: #9ca3af; --link: #1d4ed8; }
+  html.dark { --bg: #0f172a; --ink: #e5e7eb; --muted: #9ca3af; --grid: #334155; --bar: #60a5fa; --bar2: #64748b; --link: #93c5fd; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); }
+  body { font: 14px/1.45 Georgia, "Times New Roman", serif; padding: 8px 4px; }
+  .fig { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 640px) { .fig { grid-template-columns: 1fr; } }
+  svg { width: 100%; height: auto; display: block; }
+  svg text { font-family: Georgia, "Times New Roman", serif; fill: var(--ink); }
+  .caption { margin: 10px 2px 0; font-size: 13.5px; }
+  .caption a { color: var(--link); }
+  .status { color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="fig">
+  <svg id="stars" viewBox="0 0 420 320" role="img" aria-label="Repositori dengan star terbanyak"></svg>
+  <svg id="langs" viewBox="0 0 420 320" role="img" aria-label="Repositori per bahasa"></svg>
+</div>
+<p class="caption" id="caption"><span class="status">Memuat data dari GitHub…</span></p>
+
+<script>
+// Follow the site's light or dark theme (the MyST page sets class="dark" on <html>).
+function syncTheme() {
+  try { document.documentElement.classList.toggle("dark", parent.document.documentElement.classList.contains("dark")); } catch {}
+}
+syncTheme();
+try { new MutationObserver(syncTheme).observe(parent.document.documentElement, { attributes: true, attributeFilter: ["class"] }); } catch {}
+
+const NS = "http://www.w3.org/2000/svg";
+const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+function el(tag, attrs, text) {
+  const n = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+  if (text != null) n.textContent = text;
+  return n;
+}
+function niceScale(max, ticks = 5) {
+  const raw = max / ticks, mag = 10 ** Math.floor(Math.log10(raw || 1));
+  const step = [1, 2, 2.5, 5, 10].map((m) => m * mag).find((s) => s >= raw);
+  return { top: Math.ceil(max / step) * step || step, step };
+}
+
+// Horizontal bar panel with a value axis at the bottom, like a matplotlib barh.
+function barh(svg, { label, xlabel, rows }) {
+  svg.replaceChildren();
+  const W = 420, H = 320, m = { l: 150, r: 18, t: 28, b: 44 };
+  const pw = W - m.l - m.r, ph = H - m.t - m.b;
+  const { top, step } = niceScale(Math.max(1, ...rows.map((r) => r.v)));
+  const x = (v) => m.l + (v / top) * pw;
+  const bh = ph / rows.length;
+  svg.append(el("text", { x: 6, y: 18, "font-size": 15, "font-weight": 700 }, label));
+  for (let v = 0; v <= top + 1e-9; v += step) {
+    svg.append(el("line", { x1: x(v), y1: m.t, x2: x(v), y2: m.t + ph, stroke: css("--grid"), "stroke-width": 1 }));
+    svg.append(el("text", { x: x(v), y: m.t + ph + 16, "font-size": 11, "text-anchor": "middle" }, v.toLocaleString("id-ID")));
+  }
+  svg.append(el("line", { x1: m.l, y1: m.t, x2: m.l, y2: m.t + ph, stroke: css("--ink"), "stroke-width": 1 }));
+  svg.append(el("line", { x1: m.l, y1: m.t + ph, x2: m.l + pw, y2: m.t + ph, stroke: css("--ink"), "stroke-width": 1 }));
+  svg.append(el("text", { x: m.l + pw / 2, y: H - 6, "font-size": 12, "text-anchor": "middle" }, xlabel));
+  rows.forEach((r, i) => {
+    const y = m.t + i * bh + bh * 0.18, h = bh * 0.64;
+    svg.append(el("rect", { x: m.l, y, width: Math.max(0, x(r.v) - m.l), height: h, fill: css("--bar"), stroke: css("--ink"), "stroke-width": 0.6 }));
+    const name = r.name.length > 22 ? r.name.slice(0, 21) + "…" : r.name;
+    svg.append(el("text", { x: m.l - 6, y: y + h / 2 + 4, "font-size": 10.5, "text-anchor": "end" }, name));
+    svg.append(el("text", { x: x(r.v) + 4, y: y + h / 2 + 4, "font-size": 10 }, r.v.toLocaleString("id-ID")));
+  });
+}
+
+let repos = [];
+function render() {
+  const own = repos.filter((r) => !r.fork);
+  const top = own.slice().sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 10)
+    .map((r) => ({ name: r.name, v: r.stargazers_count }));
+  const byLang = {};
+  for (const r of own) byLang[r.language || "Lainnya"] = (byLang[r.language || "Lainnya"] || 0) + 1;
+  const langs = Object.entries(byLang).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([name, v]) => ({ name, v }));
+  barh(document.getElementById("stars"), { label: "(a)", xlabel: "Jumlah star", rows: top });
+  barh(document.getElementById("langs"), { label: "(b)", xlabel: "Jumlah repositori", rows: langs });
+  const stars = own.reduce((s, r) => s + r.stargazers_count, 0);
+  document.getElementById("caption").innerHTML =
+    `<b>Gambar 3.</b> Repositori GitHub saya (${own.length} repositori, ${stars.toLocaleString("id-ID")} star). ` +
+    `(a) Sepuluh repositori dengan star terbanyak. (b) Jumlah repositori per bahasa utama. ` +
+    `Sumber: <a href="https://github.com/Defani" target="_blank" rel="noopener">GitHub API</a>.`;
+}
+
+fetch("https://api.github.com/users/Defani/repos?per_page=100")
+  .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+  .then((d) => { repos = d; render(); })
+  .catch((e) => { document.getElementById("caption").innerHTML = `<span class="status">Data GitHub belum bisa dimuat (${e.message}).</span>`; });
+
+// Redraw with the theme's colours when the site switches between light and dark.
+try { new MutationObserver(() => repos.length && render()).observe(document.documentElement, { attributes: true, attributeFilter: ["class"] }); } catch {}
+</script>
+<script>
+// English unless the embedding page is Indonesian (/id/...): translate the visible text in place.
+(function () {
+  var EN; try { EN = !parent.location.pathname.startsWith("/id"); } catch (e) { EN = false; }
+  if (!EN) return;
+  document.documentElement.lang = "en";
+  var DICT = [["Sepuluh repositori dengan star terbanyak.", "The ten most-starred repositories."], ["Jumlah repositori per bahasa utama.", "Number of repositories per main language."], ["Data GitHub belum bisa dimuat", "GitHub data could not be loaded"], ["Memuat data dari GitHub…", "Loading data from GitHub…"], ["Repositori GitHub saya", "My GitHub repositories"], ["Jumlah repositori", "Repositories"], ["repositori,", "repositories,"], ["Jumlah star", "Stars"], ["Gambar 3.", "Figure 3."], ["Sumber:", "Source:"], ["Lainnya", "Other"]];
+  var done = new WeakMap();
+  function tr(root) {
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    for (var n = w.nextNode(); n; n = w.nextNode()) {
+      var t = n.nodeValue, o = t;
+      if (done.get(n) === t) continue;
+      DICT.forEach(function (p) { if (o.indexOf(p[0]) >= 0) o = o.split(p[0]).join(p[1]); });
+      done.set(n, o);
+      if (o !== t) n.nodeValue = o;
+    }
+  }
+  function start() {
+    tr(document.body);
+    new MutationObserver(function (ms) { ms.forEach(function (m) { tr(m.target.nodeType === 3 ? m.target.parentNode : m.target); }); })
+      .observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
+})();
+</script>
+</body>
+</html>

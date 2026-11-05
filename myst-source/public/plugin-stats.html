@@ -14,7 +14,18 @@
   .caption { margin: 10px 2px 0; font-size: 13.5px; }
   .caption b { font-weight: 700; }
   .status { color: #555; font-size: 13px; }
+  /* Dark theme: invert the chart, keep hues. */
+  html.dark body { filter: invert(.9) hue-rotate(180deg); }
+  html.dark { background: #1a1a1a; }
 </style>
+<script>
+// Follow the site's light or dark theme (the MyST page sets class="dark" on <html>).
+(function () {
+  function sync() { try { document.documentElement.classList.toggle("dark", parent.document.documentElement.classList.contains("dark")); } catch (e) {} }
+  sync();
+  try { new MutationObserver(sync).observe(parent.document.documentElement, { attributes: true, attributeFilter: ["class"] }); } catch (e) {}
+})();
+</script>
 </head>
 <body>
 <div class="fig">
@@ -120,6 +131,32 @@ async function main() {
 main().catch((e) => {
   document.getElementById("caption").innerHTML = `<span class="status">Data belum bisa dimuat (${e.message}). Lihat <a href="https://plugins.geolibre.app/plugins/stats.json" target="_blank" rel="noopener">plugins.geolibre.app</a>.</span>`;
 });
+</script>
+<script>
+// English unless the embedding page is Indonesian (/id/...): translate the visible text in place.
+(function () {
+  var EN; try { EN = !parent.location.pathname.startsWith("/id"); } catch (e) { EN = false; }
+  if (!EN) return;
+  document.documentElement.lang = "en";
+  var DICT = [["Pengguna unik per minggu ISO, minggu lalu dan minggu ini.", "Unique users per ISO week, last week and this week."], ["Pemakaian plugin GeoLibre buatan saya.", "Use of my GeoLibre plugins."], ["Total launch sejak pencatatan dimulai", "Total launches since counting began"], ["Pengguna unik per minggu", "Unique users per week"], ["Data belum bisa dimuat", "Data could not be loaded"], ["Memuat data dari", "Loading data from"], ["Minggu lalu", "Last week"], ["diperbarui", "updated"], ["Minggu ini", "This week"], ["Gambar 1.", "Figure 1."], ["Sumber:", "Source:"], ["Lihat", "See"]];
+  var done = new WeakMap();
+  function tr(root) {
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    for (var n = w.nextNode(); n; n = w.nextNode()) {
+      var t = n.nodeValue, o = t;
+      if (done.get(n) === t) continue;
+      DICT.forEach(function (p) { if (o.indexOf(p[0]) >= 0) o = o.split(p[0]).join(p[1]); });
+      done.set(n, o);
+      if (o !== t) n.nodeValue = o;
+    }
+  }
+  function start() {
+    tr(document.body);
+    new MutationObserver(function (ms) { ms.forEach(function (m) { tr(m.target.nodeType === 3 ? m.target.parentNode : m.target); }); })
+      .observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
+})();
 </script>
 </body>
 </html>

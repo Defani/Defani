@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=block");
+
+/* Palet dari mystmd.org/guide */
+:root {
+  --myst-color-link: #1d4ed8;
+  --myst-color-link-hover: #3b82f6;
+  --myst-color-link-underline: #60a5fa;
+  --myst-color-active: #2563eb;
+  --myst-color-active-bg: rgba(147, 197, 253, .3);
+  --myst-color-active-surface: #eff6ff;
+  --myst-color-primary: #3b82f6;
+  --myst-color-primary-hover: #1d4ed8;
+  --myst-color-focus-ring: #3b82f6;
+  --myst-color-focus-outline: #bfdbfe;
+  --myst-color-accent-text: #1e3a8a;
+  --myst-color-accent-surface: #eff6ff;
+  --myst-color-accent-surface-border: #bfdbfe;
+  --myst-color-accent-surface-text: #1e3a8a;
+  --myst-color-bg: #fff;
+  --myst-color-bg-secondary: #f9fafb;
+  --myst-color-surface: #f3f4f6;
+  --myst-color-surface-hover: #e5e7eb;
+  --myst-color-text: #111827;
+  --myst-color-text-secondary: #4b5563;
+  --myst-color-text-tertiary: #6b7280;
+  --myst-color-prose-body: #44403c;
+  --myst-color-border: #e5e7eb;
+  --myst-color-border-strong: #d1d5db;
+  --myst-color-inverse-bg: #1e3a8a;
+  --myst-color-inverse-text: #fff;
+  --myst-color-code: #be185d;
+  --myst-color-info: #3b82f6;
+  --myst-color-info-bg: #eff6ff;
+  --myst-color-info-text: #2563eb;
+  --myst-color-success: #16a34a;
+  --myst-color-success-bg: #f0fdf4;
+  --myst-color-success-text: #16a34a;
+  --myst-color-warning: #d97706;
+  --myst-color-warning-bg: #fffbeb;
+  --myst-color-warning-text: #d97706;
+  --myst-color-danger: #dc2626;
+  --myst-color-danger-bg: #fef2f2;
+  --myst-color-danger-text: #dc2626;
+  --myst-color-error: #ef4444;
+  --myst-color-error-bg: #fee2e2;
+  --myst-color-error-text: #b91c1c;
+}
+
+/* Round profile photo */
+img[alt="Foto Defani Arman Alfitriansyah"] { border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover; }
+
+/* Sidebar menu icons (Google Material Symbols) */
+.myst-toc a[href="/"]::before, nav[aria-label] a[href="/"]::before,
+.myst-toc a[href="/projects"]::before, nav[aria-label] a[href="/projects"]::before,
+.myst-toc a[href="/dashboard"]::before, nav[aria-label] a[href="/dashboard"]::before,
+.myst-toc a[href="/plugins"]::before, nav[aria-label] a[href="/plugins"]::before,
+.myst-toc a[href="/geolibre"]::before, nav[aria-label] a[href="/geolibre"]::before,
+.myst-toc a[href="/webgis"]::before, nav[aria-label] a[href="/webgis"]::before,
+.myst-toc a[href="/modul"]::before, nav[aria-label] a[href="/modul"]::before,
+.myst-toc a[href="/perpus"]::before, nav[aria-label] a[href="/perpus"]::before,
+.myst-toc a[href="/panduan"]::before, nav[aria-label] a[href="/panduan"]::before,
+.myst-toc a[href="/repositori"]::before, nav[aria-label] a[href="/repositori"]::before,
+.myst-toc a[href="/tutorial"]::before, nav[aria-label] a[href="/tutorial"]::before,
+.myst-toc a[href="/expertise"]::before, nav[aria-label] a[href="/expertise"]::before,
+.myst-toc a[href="/tools"]::before, nav[aria-label] a[href="/tools"]::before,
+.myst-toc a[href="/contact"]::before, nav[aria-label] a[href="/contact"]::before {
+  font-family: "Material Symbols Outlined"; font-size: 18px; line-height: 1; vertical-align: -4px;
+  margin-right: 8px; font-weight: 400; font-style: normal; display: inline-block;
+}
+.myst-toc a[href="/"]::before, nav[aria-label] a[href="/"]::before { content: "home"; }
+.myst-toc a[href="/projects"]::before, nav[aria-label] a[href="/projects"]::before { content: "rocket_launch"; }
+.myst-toc a[href="/dashboard"]::before, nav[aria-label] a[href="/dashboard"]::before { content: "monitoring"; }
+.myst-toc a[href="/plugins"]::before, nav[aria-label] a[href="/plugins"]::before { content: "extension"; }
+.myst-toc a[href="/geolibre"]::before, nav[aria-label] a[href="/geolibre"]::before { content: "public"; }
+.myst-toc a[href="/webgis"]::before, nav[aria-label] a[href="/webgis"]::before { content: "apps"; }
+.myst-toc a[href="/modul"]::before, nav[aria-label] a[href="/modul"]::before { content: "menu_book"; }
+.myst-toc a[href="/perpus"]::before, nav[aria-label] a[href="/perpus"]::before { content: "local_library"; }
+.myst-toc a[href="/panduan"]::before, nav[aria-label] a[href="/panduan"]::before { content: "description"; }
+.myst-toc a[href="/repositori"]::before, nav[aria-label] a[href="/repositori"]::before { content: "inventory_2"; }
+.myst-toc a[href="/tutorial"]::before, nav[aria-label] a[href="/tutorial"]::before { content: "school"; }
+.myst-toc a[href="/expertise"]::before, nav[aria-label] a[href="/expertise"]::before { content: "forest"; }
+.myst-toc a[href="/tools"]::before, nav[aria-label] a[href="/tools"]::before { content: "build"; }
+.myst-toc a[href="/contact"]::before, nav[aria-label] a[href="/contact"]::before { content: "mail"; }

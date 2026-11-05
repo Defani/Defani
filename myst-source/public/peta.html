@@ -3,64 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peta lokasi kerja</title>
+<title>Peta kehutanan Gayo</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.js"></script>
 <style>
+  :root { --text: #111827; --muted: #4b5563; --border: #e5e7eb; --link: #1d4ed8; }
   html, body { margin: 0; height: 100%; background: #fff; }
-  body { font: 13px/1.4 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color: #111827; display: flex; flex-direction: column; }
-  #map { flex: 1; border-top: 2px solid #111827; border-bottom: 2px solid #111827; }
-  .caption { margin: 8px 2px 0; color: #4b5563; }
-  .caption b { color: #111827; }
+  body { font: 13px/1.4 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--text); display: flex; flex-direction: column; }
+  .stage { position: relative; flex: 1; border-top: 2px solid var(--text); border-bottom: 2px solid var(--text); }
+  #map { position: absolute; inset: 0; }
+  .layers {
+    position: absolute; top: 10px; left: 10px; z-index: 2; background: #fff; border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px 10px; min-width: 190px; box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  }
+  .layers h2 { margin: 0 0 6px; font-size: 12px; font-weight: 700; }
+  .layers label { display: flex; align-items: center; gap: 7px; padding: 3px 0; cursor: pointer; }
+  .layers input { margin: 0; accent-color: var(--link); }
+  .swatch { width: 12px; height: 12px; border-radius: 2px; flex: none; border: 1px solid rgba(0,0,0,.15); }
+  .dot { border-radius: 50%; }
+  .note { color: var(--muted); font-size: 11.5px; margin-top: 4px; }
+  .caption { margin: 8px 2px 0; color: var(--muted); }
+  .caption b { color: var(--text); }
   .maplibregl-popup-content { font: 13px/1.4 ui-sans-serif, system-ui, sans-serif; padding: 10px 12px; }
   .maplibregl-popup-content strong { display: block; margin-bottom: 2px; }
+  @media (max-width: 520px) { .layers { min-width: 0; font-size: 12px; } }
+  html.dark { --text: #e5e7eb; --muted: #9ca3af; --border: #334155; --link: #93c5fd; }
+  html.dark, html.dark body { background: #0f172a; }
+  html.dark .layers { background: #1e293b; }
 </style>
+<script>
+// Follow the site's light or dark theme (the MyST page sets class="dark" on <html>).
+(function () {
+  function sync() { try { document.documentElement.classList.toggle("dark", parent.document.documentElement.classList.contains("dark")); } catch (e) {} }
+  sync();
+  try { new MutationObserver(sync).observe(parent.document.documentElement, { attributes: true, attributeFilter: ["class"] }); } catch (e) {}
+})();
+</script>
 </head>
 <body>
-<div id="map" role="region" aria-label="Peta lokasi kerja"></div>
-<p class="caption"><b>Gambar 2.</b> Lokasi kerja dan riset. Klik penanda untuk keterangan. Basemap © OpenFreeMap, data © OpenStreetMap contributors.</p>
+<div class="stage">
+  <div id="map" role="region" aria-label="Peta kehutanan dataran tinggi Gayo"></div>
+  <div class="layers" aria-label="Layer">
+    <h2>Layer</h2>
+    <label><input type="checkbox" data-layer="places" checked><span class="swatch dot" style="background:#1d4ed8"></span>Lokasi kerja</label>
+    <label><input type="checkbox" data-layer="inat" checked><span class="swatch dot" style="background:#74ac00"></span>Observasi iNaturalist</label>
+    <label><input type="checkbox" data-layer="gbif"><span class="swatch" style="background:#f59e0b"></span>Kejadian GBIF</label>
+    <label><input type="checkbox" data-layer="loss"><span class="swatch" style="background:#e5007e"></span>Kehilangan tutupan pohon</label>
+    <label><input type="checkbox" data-layer="kab" checked><span class="swatch" style="background:#fff;border:2px solid #7c3aed"></span>Batas kabupaten (BIG)</label>
+    <label><input type="checkbox" data-layer="kec"><span class="swatch" style="background:#fff;border:1px dashed #6b7280"></span>Batas kecamatan (BIG)</label>
+    <label><input type="checkbox" data-layer="quake" checked><span class="swatch dot" style="background:#dc2626"></span>Gempa terkini BMKG</label>
+    <div class="note" id="quake-note">Memuat data gempa…</div>
+  </div>
+</div>
+<p class="caption"><b>Gambar 2.</b> Dataran tinggi Gayo (Aceh Tengah dan Bener Meriah), lokasi kerja sekarang. Sumber: OpenStreetMap, iNaturalist, GBIF, Hansen/UMD/Google Global Forest Change v1.4 (2001–2016), dan BMKG. Layer kawasan hutan KLHK belum ditampilkan karena layanan resminya tidak bisa diakses saat ini.</p>
+
 <script>
 // Places of work and research, as plain points (no personal data).
 const PLACES = {
   type: "FeatureCollection",
   features: [
+    { type: "Feature", geometry: { type: "Point", coordinates: [96.849, 4.628] },
+      properties: { name: "Takengon, Aceh Tengah", note: "Lokasi kerja sekarang. Agroforestri kopi Gayo: basis data GIS, WebGIS, dan sistem ketelusuran." } },
+    { type: "Feature", geometry: { type: "Point", coordinates: [96.856, 4.722] },
+      properties: { name: "Simpang Tiga Redelong, Bener Meriah", note: "Lokasi kerja sekarang. Agroforestri kopi Gayo: pemetaan dan pemantauan kebun." } },
     { type: "Feature", geometry: { type: "Point", coordinates: [108.483, -6.976] },
-      properties: { name: "Kuningan, Jawa Barat", note: "Universitas Kuningan dan Taman Nasional Gunung Ciremai: riset karbon, survei biodiversitas, asisten laboratorium GIS." } },
-    { type: "Feature", geometry: { type: "Point", coordinates: [96.85, 4.62] },
-      properties: { name: "Dataran tinggi Gayo, Aceh", note: "Agroforestri: basis data GIS, WebGIS, dan sistem ketelusuran (traceability)." } },
+      properties: { name: "Kuningan, Jawa Barat", note: "Lokasi riset sebelumnya: Universitas Kuningan dan Taman Nasional Gunung Ciremai." } },
   ],
 };
 
+const raster = (tiles, attribution, extra = {}) => ({ type: "raster", tiles: [tiles], tileSize: 256, attribution, ...extra });
+const bigExport = (svc) =>
+  `https://geoservices.big.go.id/rbi/rest/services/${svc}/MapServer/export?bbox={bbox-epsg-3857}&bboxSR=3857&imageSR=3857&size=256,256&format=png32&transparent=true&f=image`;
+
 const map = new maplibregl.Map({
   container: "map",
-  style: "https://tiles.openfreemap.org/styles/positron",
-  bounds: [[94.5, -8.5], [111.5, 6.5]],
+  style: {
+    version: 8,
+    sources: {
+      osm: raster("https://tile.openstreetmap.org/{z}/{x}/{y}.png", "© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors", { maxzoom: 19 }),
+      inat: raster("https://api.inaturalist.org/v1/points/{z}/{x}/{y}.png", "<a href=\"https://www.inaturalist.org\">iNaturalist</a>"),
+      gbif: raster("https://api.gbif.org/v2/map/occurrence/density/{z}/{x}/{y}@1x.png?srs=EPSG:3857&style=classic.point", "<a href=\"https://www.gbif.org\">GBIF</a>"),
+      loss: raster("https://storage.googleapis.com/earthenginepartners-hansen/tiles/gfc_v1.4/loss_alpha/{z}/{x}/{y}.png", "Hansen/UMD/Google/USGS/NASA", { maxzoom: 12 }),
+      // Administrative boundaries from BIG (Ina-Geoportal), drawn by the ArcGIS export endpoint.
+      kec: raster(bigExport("BATASWILAYAH/BATAS_KECAMATAN_AR"), "<a href=\"https://tanahair.indonesia.go.id\">BIG</a>"),
+      kab: raster(bigExport("BATASWILAYAH/BATAS_KABKOTA_LN"), "<a href=\"https://tanahair.indonesia.go.id\">BIG</a>"),
+    },
+    layers: [
+      { id: "osm", type: "raster", source: "osm" },
+      { id: "loss", type: "raster", source: "loss", layout: { visibility: "none" }, paint: { "raster-opacity": 0.85 } },
+      { id: "kec", type: "raster", source: "kec", layout: { visibility: "none" }, paint: { "raster-opacity": 0.8 } },
+      { id: "kab", type: "raster", source: "kab" },
+      { id: "gbif", type: "raster", source: "gbif", layout: { visibility: "none" } },
+      { id: "inat", type: "raster", source: "inat" },
+    ],
+  },
+  bounds: [[96.45, 4.4], [97.25, 4.95]],
   fitBoundsOptions: { padding: 30 },
   attributionControl: { compact: true },
   cooperativeGestures: true,
 });
 map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+map.addControl(new maplibregl.ScaleControl({ unit: "metric" }), "bottom-right");
 
-map.on("load", () => {
+function popupOn(layer, html) {
+  map.on("click", layer, (e) => {
+    new maplibregl.Popup({ offset: 10 }).setLngLat(e.lngLat).setHTML(html(e.features[0].properties)).addTo(map);
+  });
+  map.on("mouseenter", layer, () => (map.getCanvas().style.cursor = "pointer"));
+  map.on("mouseleave", layer, () => (map.getCanvas().style.cursor = ""));
+}
+
+map.on("load", async () => {
   map.addSource("places", { type: "geojson", data: PLACES });
-  map.addLayer({
-    id: "places-halo", type: "circle", source: "places",
-    paint: { "circle-radius": 13, "circle-color": "#3b82f6", "circle-opacity": 0.18 },
-  });
-  map.addLayer({
-    id: "places", type: "circle", source: "places",
-    paint: { "circle-radius": 6, "circle-color": "#1d4ed8", "circle-stroke-color": "#fff", "circle-stroke-width": 2 },
-  });
-  map.on("click", "places", (e) => {
-    const p = e.features[0].properties;
-    new maplibregl.Popup({ offset: 10 })
-      .setLngLat(e.features[0].geometry.coordinates)
-      .setHTML(`<strong>${p.name}</strong>${p.note}`)
-      .addTo(map);
-  });
-  map.on("mouseenter", "places", () => (map.getCanvas().style.cursor = "pointer"));
-  map.on("mouseleave", "places", () => (map.getCanvas().style.cursor = ""));
+  map.addLayer({ id: "places", type: "circle", source: "places",
+    paint: { "circle-radius": 6, "circle-color": "#1d4ed8", "circle-stroke-color": "#fff", "circle-stroke-width": 2 } });
+  popupOn("places", (p) => `<strong>${p.name}</strong>${p.note}`);
+
+  // Latest M5+ earthquakes in Indonesia from BMKG, sized by magnitude.
+  try {
+    const r = await fetch("https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json");
+    const list = (await r.json()).Infogempa.gempa;
+    const quakes = {
+      type: "FeatureCollection",
+      features: list.map((g) => {
+        const [lat, lon] = g.Coordinates.split(",").map(Number);
+        return { type: "Feature", geometry: { type: "Point", coordinates: [lon, lat] },
+          properties: { mag: Number(g.Magnitude), wilayah: g.Wilayah, waktu: `${g.Tanggal} ${g.Jam}`, kedalaman: g.Kedalaman } };
+      }),
+    };
+    map.addSource("quake", { type: "geojson", data: quakes });
+    map.addLayer({ id: "quake", type: "circle", source: "quake",
+      paint: {
+        "circle-radius": ["interpolate", ["linear"], ["get", "mag"], 5, 5, 7, 14],
+        "circle-color": "#dc2626", "circle-opacity": 0.55, "circle-stroke-color": "#991b1b", "circle-stroke-width": 1,
+      } });
+    popupOn("quake", (p) => `<strong>M ${p.mag} · ${p.waktu}</strong>${p.wilayah}<br>Kedalaman ${p.kedalaman}`);
+    document.getElementById("quake-note").textContent = `${list.length} gempa M5+ terakhir se-Indonesia. Zoom out untuk melihat semua.`;
+  } catch {
+    document.getElementById("quake-note").textContent = "Data gempa BMKG belum bisa dimuat.";
+  }
+
+  for (const box of document.querySelectorAll("[data-layer]")) {
+    const id = box.dataset.layer;
+    const apply = () => map.getLayer(id) && map.setLayoutProperty(id, "visibility", box.checked ? "visible" : "none");
+    apply();
+    box.addEventListener("change", apply);
+  }
 });
+</script>
+<script>
+// English unless the embedding page is Indonesian (/id/...): translate the visible text in place.
+(function () {
+  var EN; try { EN = !parent.location.pathname.startsWith("/id"); } catch (e) { EN = false; }
+  if (!EN) return;
+  document.documentElement.lang = "en";
+  var DICT = [["Layer kawasan hutan KLHK belum ditampilkan karena layanan resminya tidak bisa diakses saat ini.", "The KLHK forest estate layer is not shown because its official service cannot be reached at the moment."], ["Lokasi kerja sekarang di dataran tinggi Gayo (Aceh Tengah dan Bener Meriah).", "Where I work now: the Gayo highlands (Central Aceh and Bener Meriah)."], ["gempa M5+ terakhir se-Indonesia. Zoom out untuk melihat semua.", "latest M5+ earthquakes in Indonesia. Zoom out to see them all."], ["Data gempa BMKG belum bisa dimuat.", "BMKG earthquake data could not be loaded."], ["Kehilangan tutupan pohon", "Tree cover loss"], ["Lokasi riset sebelumnya:", "Earlier research site:"], ["Lokasi kerja sekarang.", "Where I work now."], ["Observasi iNaturalist", "iNaturalist observations"], ["Batas kabupaten (BIG)", "Regency boundaries (BIG)"], ["Batas kecamatan (BIG)", "District boundaries (BIG)"], ["Gempa terkini BMKG", "Latest BMKG earthquakes"], ["Memuat data gempa…", "Loading earthquakes…"], ["Kejadian GBIF", "GBIF occurrences"], ["Lokasi kerja", "Places of work"], ["Gambar 2.", "Figure 2."], ["Kedalaman", "Depth"], ["Sumber:", "Sources:"], [" dan ", " and "]];
+  var done = new WeakMap();
+  function tr(root) {
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    for (var n = w.nextNode(); n; n = w.nextNode()) {
+      var t = n.nodeValue, o = t;
+      if (done.get(n) === t) continue;
+      DICT.forEach(function (p) { if (o.indexOf(p[0]) >= 0) o = o.split(p[0]).join(p[1]); });
+      done.set(n, o);
+      if (o !== t) n.nodeValue = o;
+    }
+  }
+  function start() {
+    tr(document.body);
+    new MutationObserver(function (ms) { ms.forEach(function (m) { tr(m.target.nodeType === 3 ? m.target.parentNode : m.target); }); })
+      .observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
+})();
 </script>
 </body>
 </html>

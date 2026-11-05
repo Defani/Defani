@@ -1,61 +1,48 @@
-# Modul GIS
+# GIS books and modules
+
+**English** · [Bahasa Indonesia](id/modul.md)
 
 ## Panduan Praktis SQL DuckDB di GeoLibre
 
 :::{image} assets/cover-sql-duckdb.png
-:alt: Sampul buku Panduan Praktis SQL DuckDB di GeoLibre
+:alt: Cover of the book Panduan Praktis SQL DuckDB di GeoLibre
 :width: 260px
 :align: left
 :::
 
-Belajar SQL spasial dari nol pakai bahasa sehari-hari, langsung praktek di GeoLibre yang gratis dan open source.
+Learn spatial SQL from scratch in plain language, practising in GeoLibre, which is free and open source. The book is written in Indonesian.
 
-**Rp85.000** · Ebook PDF + EPUB · 420 halaman
+**Rp85,000** · Ebook PDF + EPUB · 420 pages
 
-[Beli di Mayar](https://modul-gis-defani.myr.id/ebook/tpanduan-praktis-sql-duckdb-di-geolibre)
+[Buy on Mayar](https://modul-gis-defani.myr.id/ebook/tpanduan-praktis-sql-duckdb-di-geolibre) · [Read a sample](/reader.html?file=/perpus/sampel-sql-duckdb-geolibre.pdf&title=Panduan%20Praktis%20SQL%20DuckDB%20di%20GeoLibre%20%28sample%29)
 
-Ebook berbahasa Indonesia santai yang mengajarkan cara mengolah data vektor dengan SQL DuckDB langsung di GeoLibre. Mulai dari install GeoLibre, kenalan dengan SQL Workspace, sampai studi kasus clip tuplah, stok karbon TNGC, dan indeks keanekaragaman dari GBIF dan iNaturalist. Semua latihan memakai data riil Kabupaten Kuningan dan Jawa Barat, lengkap dengan data contoh siap unduh.
+A relaxed, Indonesian-language ebook that teaches vector data processing with DuckDB SQL inside GeoLibre: from installing GeoLibre and the SQL Workspace to case studies on clipping official land cover data, carbon stock in Mount Ciremai National Park, and biodiversity indices from GBIF and iNaturalist. All exercises use real data from Kuningan Regency and West Java, with sample data ready to download.
 
-### Yang akan dipelajari
+### What you will learn
 
-- Unduh, install, dan update GeoLibre, plus arti lisensi MIT-nya
-- Tur menu GeoLibre: Add data, Style, Controls, Settings, simpan project, dan padanannya di QGIS
-- Persiapan data: mengubah zip RBI dari BIG (File Geodatabase) menjadi GeoJSON dan GeoParquet
-- Dasar SQL: SELECT, WHERE, GROUP BY, HAVING, CASE, JOIN, CTE, window function
-- SQL spasial: sistem koordinat dan proyeksi UTM, luas, panjang, jarak, spatial join, buffer, clip, dissolve
-- Membersihkan data vektor dan membaca data online tanpa unduh
-- Studi kasus: clip tuplah Kabupaten Kuningan, stok karbon Taman Nasional Gunung Ciremai, indeks keanekaragaman dari GBIF dan iNaturalist
-- Menyajikan hasil menjadi peta siap cetak
+- Downloading, installing and updating GeoLibre, and what its MIT licence means
+- A tour of GeoLibre's menus, with their QGIS equivalents
+- Preparing data: converting the official RBI topographic data (File Geodatabase) to GeoJSON and GeoParquet
+- SQL basics: SELECT, WHERE, GROUP BY, HAVING, CASE, JOIN, CTE, window functions
+- Spatial SQL: coordinate systems and UTM, area, length, distance, spatial join, buffer, clip, dissolve
+- Cleaning vector data and reading online data without downloading it
+- Case studies: land cover in Kuningan, carbon stock in Mount Ciremai National Park, biodiversity indices from GBIF and iNaturalist
+- Turning results into print-ready maps
 
-### Isi buku
+### Inside the book
 
-- 420 halaman, 4 bagian, 26 bab
-- 155 gambar dan screenshot GeoLibre versi terbaru
-- 147 contoh kode SQL dengan pewarnaan sintaks
-- Lampiran 100 resep SQL sehari-hari
-- Kamus sintaks DuckDB yang tertaut langsung dari teks
-- Pertanyaan latihan, tugas sintesis, dan checkpoint di tiap bab
+- 420 pages, 4 parts, 26 chapters
+- 155 figures and screenshots of the latest GeoLibre
+- 147 SQL examples with syntax highlighting
+- An appendix of 100 everyday SQL recipes and a linked DuckDB syntax dictionary
+- Exercises, synthesis tasks and checkpoints in every chapter
 
-### Format yang didapat
+Digital product, delivered automatically after payment. This is an independent guide, not officially affiliated with GeoLibre or DuckDB.
 
-- PDF digital dengan daftar isi yang bisa diklik dan tautan ke kamus
-- PDF siap cetak
-- EPUB untuk dibaca di HP atau e-reader
-- Tautan Google Drive data contoh: RBI Kuningan dari BIG (GeoJSON dan GeoParquet), tuplah 2024 dan 2025, batas TNGC, batas kabupaten/kota Jawa Barat
+## Free module: cloud remote sensing
 
-### Cocok untuk
+A remote sensing module you can open and download for free from Google Drive.
 
-- Mahasiswa kehutanan, geografi, lingkungan, planologi, dan teknik geodesi
-- Analis GIS dan konsultan yang ingin bekerja lebih cepat dan rapi
-- Penyuluh, peneliti, dan staf instansi yang sering mengolah data RBI atau tuplah
-- Pengguna QGIS atau ArcGIS yang penasaran dengan SQL spasial
+[Open the free module](https://drive.google.com/drive/folders/1NR23hEoSSn5nkFDDkqhZcHKpGfagF0t8)
 
-Yang perlu disiapkan: laptop Windows, macOS, atau Linux, dan GeoLibre Desktop (gratis). Tidak perlu jago coding.
-
-Produk digital, file dikirim otomatis setelah pembayaran. Buku ini panduan independen dan tidak berafiliasi resmi dengan proyek GeoLibre atau DuckDB.
-
-## Modul gratis: Penginderaan Jauh Cloud
-
-Modul penginderaan jauh yang bisa diakses dan diunduh gratis dari Google Drive.
-
-[Buka modul gratis](https://drive.google.com/drive/folders/1NR23hEoSSn5nkFDDkqhZcHKpGfagF0t8)
+The full library of books you can read on this site is on the [Library](perpus.md) page.
