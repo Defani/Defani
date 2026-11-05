@@ -1,0 +1,23 @@
+version: 1
+project:
+  title: Defani Arman Alfitriansyah
+  description: Peneliti kehutanan, analis penginderaan jauh, dan asisten riset. Pemetaan biomassa mangrove, pemodelan stok karbon, dan alat geospasial open-source.
+  authors:
+    - name: Defani Arman Alfitriansyah
+  toc:
+    - file: index.md
+    - file: projects.md
+    - file: plugins.md
+    - file: webgis.md
+    - file: expertise.md
+    - file: tools.md
+    - file: modul.md
+    - file: repositories.md
+    - file: contact.md
+site:
+  template: book-theme
+  options:
+    favicon: assets/projects/layout-composer.png
+    logo_text: Defani Arman
+    folders: true
+    style: style.css
