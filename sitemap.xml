@@ -32,9 +32,6 @@
     <loc>http://localhost:3000/panduan/gbif-data</loc>
   </url>
   <url>
-    <loc>http://localhost:3000/panduan/layout-composer</loc>
-  </url>
-  <url>
     <loc>http://localhost:3000/repositori</loc>
   </url>
   <url>

@@ -4,6 +4,18 @@
 
 Plugins I have built for GeoLibre and QGIS.
 
+## How they work together
+
+```{mermaid}
+flowchart LR
+  gbif[(GBIF API)] --> p1(GBIF Data plugin)
+  inat[(iNaturalist API)] --> p2(iNaturalist Extractor)
+  p1 --> map[GeoLibre map]
+  p2 --> map
+  map --> lc(Layout Composer)
+  lc --> out[Print-ready map: PNG, PDF, GeoPDF]
+```
+
 ## Usage
 
 Counts come straight from the GeoLibre plugin registry every time this page opens.
@@ -16,19 +28,31 @@ Counts come straight from the GeoLibre plugin registry every time this page open
 
 ### Layout Composer
 
-![Layout Composer interface](assets/projects/layout-composer.png)
+:::{figure} assets/projects/layout-composer.png
+:label: fig-lc
+The Layout Composer workspace in GeoLibre.
+:::
 
 A cartographic layout designer for GeoLibre: print-ready maps with layers, grids, insets, legends, and export.
 
-[Official page](https://plugins.geolibre.app/catalog/layout-composer/) · [Guide on the web](panduan/layout-composer.md) · [Full README](repos/alat/layout-composer.md) · [Repository](https://github.com/Defani/Layout-Composer) · [Read the guide](/reader.html?file=/perpus/panduan-layout-composer.pdf&title=Panduan%20Lengkap%20Layout%20Composer)
+[Official page](https://plugins.geolibre.app/catalog/layout-composer/) · [Full README](repos/alat/layout-composer.md) · [Repository](https://github.com/Defani/Layout-Composer) · [Read the guide](/reader.html?file=/perpus/panduan-layout-composer.pdf&title=Panduan%20Lengkap%20Layout%20Composer)
 
 ### GBIF Data
 
-![GBIF occurrence points](assets/plugins/gbif-points.png)
+:::{figure} assets/plugins/gbif-points.png
+:label: fig-gbif-points
+GBIF occurrences shown as points.
+:::
 
-![GBIF occurrence density](assets/plugins/gbif-density.png)
+:::{figure} assets/plugins/gbif-density.png
+:label: fig-gbif-density
+GBIF occurrences shown as a density layer.
+:::
 
-![GBIF record popup and citation](assets/plugins/gbif-popup-and-citation.png)
+:::{figure} assets/plugins/gbif-popup-and-citation.png
+:label: fig-gbif-popup
+A record popup with its citation.
+:::
 
 Fetches occurrence records from GBIF straight onto the GeoLibre map.
 

@@ -31,9 +31,9 @@ def absolutize(md, repo, branch):
     blob = f"https://github.com/{OWNER}/{repo}/blob/{branch}/"
 
     def fix(url, is_image):
-        if re.match(r"^(https?:|mailto:|#|data:)", url):
+        if re.match(r"^(https?:|mailto:|#|data:|//)", url):
             return url
-        url = url.lstrip("./")
+        url = url.lstrip("./").lstrip("/")
         return (raw if is_image else blob) + url
 
     # Markdown images and links

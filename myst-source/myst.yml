@@ -2,6 +2,19 @@ version: 1
 project:
   title: Defani Arman Alfitriansyah
   description: Forester and remote sensing analyst. Forest carbon modeling, GIS databases and WebGIS for agroforestry, and open-source geospatial tools.
+  github: https://github.com/Defani/Defani
+  keywords: [forestry, remote sensing, GIS, Google Earth Engine, GeoLibre, QGIS, forest carbon, WebGIS]
+  abbreviations:
+    GIS: Geographic Information System
+    GEE: Google Earth Engine
+    SQL: Structured Query Language
+    BIG: Badan Informasi Geospasial (Indonesian Geospatial Information Agency)
+    KLHK: Kementerian Lingkungan Hidup dan Kehutanan (Ministry of Environment and Forestry)
+    BMKG: Badan Meteorologi, Klimatologi, dan Geofisika
+    TNGC: Taman Nasional Gunung Ciremai (Mount Ciremai National Park)
+    RBI: Rupabumi Indonesia (official topographic base map)
+    EUDR: EU Deforestation Regulation
+    GBIF: Global Biodiversity Information Facility
   authors:
     - name: Defani Arman Alfitriansyah
   toc:
@@ -43,6 +56,18 @@ project:
         - file: id/contact.md
 site:
   template: book-theme
+  nav:
+    - title: Plugins
+      url: /plugins
+    - title: Library
+      url: /perpus
+    - title: Tutorials
+      url: /tutorial
+    - title: Bahasa Indonesia
+      url: /id
+  actions:
+    - title: Buy the book
+      url: https://modul-gis-defani.myr.id/ebook/tpanduan-praktis-sql-duckdb-di-geolibre
   options:
     favicon: assets/projects/layout-composer.png
     logo_text: Defani Arman

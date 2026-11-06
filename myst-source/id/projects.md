@@ -4,38 +4,47 @@
 
 Kumpulan repositori dan alat untuk penginderaan jauh, GIS, dan analisis geospasial.
 
-## RasterViz (plugin QGIS)
+::::{grid} 1 1 2 2
+:::{card} RasterViz (QGIS plugin)
+Rendering raster berkualitas publikasi dengan PyQGIS, Matplotlib, dan PyQt5.
 
-Rendering raster berkualitas publikasi, dibangun dengan [PyQGIS](https://docs.qgis.org/latest/en/docs/pyqgis_developer_cookbook/), [Matplotlib](https://github.com/matplotlib/matplotlib), dan [PyQt5](https://riverbankcomputing.com/software/pyqt/).
+[Python](https://www.python.org) · [QGIS](https://github.com/qgis/QGIS) · [Matplotlib](https://github.com/matplotlib/matplotlib) · [PyQt5](https://riverbankcomputing.com/software/pyqt/)
 
-[Python](https://www.python.org) · [QGIS](https://github.com/qgis/QGIS) · [Matplotlib](https://github.com/matplotlib/matplotlib)
-
-## EE Spectral Exploration
-
-Aplikasi [Google Earth Engine](https://earthengine.google.com) untuk menghitung indeks vegetasi multi-sensor, thresholding, dan statistik luas area.
+[README](../repos/alat/rasterviz.md) · [GitHub](https://github.com/Defani/RasterViz)
+:::
+:::{card} EE Spectral Exploration
+Aplikasi Google Earth Engine untuk indeks vegetasi multi-sensor, thresholding, dan statistik luas.
 
 [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) · [Earth Engine API](https://github.com/google/earthengine-api)
 
-## GEEDEF LULC Tools
-
-Klasifikasi tutupan lahan interaktif berbasis cloud di GEE Code Editor untuk pemetaan terbimbing.
+[README](../repos/tutorial/ee-spectral-exploration.md) · [GitHub](https://github.com/Defani/EE-SPECTRAL-EXPLORATION)
+:::
+:::{card} GEEDEF LULC Tools
+Klasifikasi tutupan lahan interaktif berbasis cloud di GEE Code Editor.
 
 [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) · Random Forest
 
-## MapBiomas ID Col 3.0 QML
+[README](../repos/alat/geedef-land-cover-classification-tools.md) · [GitHub](https://github.com/Defani/GEEDEF-Land-Cover-Classification-Tools)
+:::
+:::{card} MapBiomas ID Col 3.0 QML
+Pustaka style QGIS yang memetakan nilai piksel ke pedoman resmi MapBiomas.
 
-Pustaka style [QGIS](https://github.com/qgis/QGIS) yang memetakan nilai piksel langsung ke pedoman resmi MapBiomas.
+[QGIS](https://github.com/qgis/QGIS) · QML
 
-[QGIS](https://github.com/qgis/QGIS) · QML · Kartografi
+[README](../repos/alat/map-biomas-land-cover-style-qgis.md) · [GitHub](https://github.com/Defani/Map-Biomas-Land-cover-Style-QGIS)
+:::
+:::{card} Simple Plots
+Pembuat grafik web tanpa backend untuk figur siap publikasi, ekspor PNG dan SVG.
 
-## Simple Plots
+[JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) · [Plotly.js](https://github.com/plotly/plotly.js)
 
-Pembuat grafik berbasis web tanpa backend untuk figur siap publikasi, dengan ekspor PNG dan SVG.
+[README](../repos/alat/ploots-click.md) · [GitHub](https://github.com/Defani/Ploots-click)
+:::
+:::{card} EE CHIRPS RainMapper
+WebGIS curah hujan dari data CHIRPS dengan area kustom, grafik tren, dan ekspor GeoTIFF.
 
-HTML · CSS · [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) · [Plotly.js](https://github.com/plotly/plotly.js)
+[JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) · Earth Engine Apps
 
-## EE CHIRPS RainMapper
-
-WebGIS analisis curah hujan berbasis dataset CHIRPS (sekitar 5 km), dengan area kajian kustom, grafik tren, dan ekspor GeoTIFF.
-
-[JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) · Aplikasi Earth Engine
+[README](../repos/alat/ee-chirps-rainmapper-gee-apps.md) · [GitHub](https://github.com/Defani/EE-CHIRPS-RainMapper--GEE-APPS)
+:::
+::::

@@ -18,39 +18,44 @@ Belajar SQL spasial dari nol pakai bahasa sehari-hari, langsung praktek di GeoLi
 
 Ebook berbahasa Indonesia santai yang mengajarkan cara mengolah data vektor dengan SQL DuckDB langsung di GeoLibre. Mulai dari install GeoLibre, kenalan dengan SQL Workspace, sampai studi kasus clip tuplah, stok karbon TNGC, dan indeks keanekaragaman dari GBIF dan iNaturalist. Semua latihan memakai data riil Kabupaten Kuningan dan Jawa Barat, lengkap dengan data contoh siap unduh.
 
-### Yang akan dipelajari
-
+::::{tab-set}
+:::{tab-item} Yang akan dipelajari
 - Unduh, install, dan update GeoLibre, plus arti lisensi MIT-nya
-- Tur menu GeoLibre: Add data, Style, Controls, Settings, simpan project, dan padanannya di QGIS
-- Persiapan data: mengubah zip RBI dari BIG (File Geodatabase) menjadi GeoJSON dan GeoParquet
+- Tur menu GeoLibre dan padanannya di QGIS
+- Persiapan data: mengubah RBI dari BIG menjadi GeoJSON dan GeoParquet
 - Dasar SQL: SELECT, WHERE, GROUP BY, HAVING, CASE, JOIN, CTE, window function
-- SQL spasial: sistem koordinat dan proyeksi UTM, luas, panjang, jarak, spatial join, buffer, clip, dissolve
-- Membersihkan data vektor dan membaca data online tanpa unduh
-- Studi kasus: clip tuplah Kabupaten Kuningan, stok karbon Taman Nasional Gunung Ciremai, indeks keanekaragaman dari GBIF dan iNaturalist
-- Menyajikan hasil menjadi peta siap cetak
-
-### Isi buku
-
+- SQL spasial: sistem koordinat dan UTM, luas, panjang, jarak, spatial join, buffer, clip, dissolve
+- Studi kasus: tutupan lahan Kuningan, stok karbon TNGC, keanekaragaman dari GBIF dan iNaturalist
+:::
+:::{tab-item} Isi buku
 - 420 halaman, 4 bagian, 26 bab
 - 155 gambar dan screenshot GeoLibre versi terbaru
 - 147 contoh kode SQL dengan pewarnaan sintaks
-- Lampiran 100 resep SQL sehari-hari
-- Kamus sintaks DuckDB yang tertaut langsung dari teks
-- Pertanyaan latihan, tugas sintesis, dan checkpoint di tiap bab
-
-### Format yang didapat
-
-- PDF digital dengan daftar isi yang bisa diklik dan tautan ke kamus
+- 100 resep SQL sehari-hari dan kamus sintaks DuckDB yang tertaut
+- Latihan dan checkpoint di tiap bab
+:::
+:::{tab-item} Format
+- PDF digital dengan daftar isi yang bisa diklik
 - PDF siap cetak
-- EPUB untuk dibaca di HP atau e-reader
-- Tautan Google Drive data contoh: RBI Kuningan dari BIG (GeoJSON dan GeoParquet), tuplah 2024 dan 2025, batas TNGC, batas kabupaten/kota Jawa Barat
+- EPUB untuk HP atau e-reader
+- Tautan Google Drive data contoh (RBI Kuningan, tuplah 2024 dan 2025, batas TNGC, batas Jawa Barat)
+:::
+::::
 
-### Cocok untuk
+### Pertanyaan
 
-- Mahasiswa kehutanan, geografi, lingkungan, planologi, dan teknik geodesi
-- Analis GIS dan konsultan yang ingin bekerja lebih cepat dan rapi
-- Penyuluh, peneliti, dan staf instansi yang sering mengolah data RBI atau tuplah
-- Pengguna QGIS atau ArcGIS yang penasaran dengan SQL spasial
+:::{dropdown} Apa harus install software berbayar?
+Tidak. GeoLibre dan DuckDB gratis dan open source.
+:::
+:::{dropdown} Saya belum pernah ngoding sama sekali, bisa?
+Bisa. Buku ini mulai dari nol, termasuk menjelaskan apa itu query.
+:::
+:::{dropdown} Datanya dari mana?
+RBI dari Badan Informasi Geospasial, tuplah, batas TNGC, dan batas wilayah Jawa Barat. Semua sudah disiapkan di folder Google Drive.
+:::
+:::{dropdown} Bisa dipakai di HP?
+EPUB-nya enak dibaca di HP. Untuk praktek tetap butuh laptop.
+:::
 
 Yang perlu disiapkan: laptop Windows, macOS, atau Linux, dan GeoLibre Desktop (gratis). Tidak perlu jago coding.
 

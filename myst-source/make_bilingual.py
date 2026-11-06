@@ -29,10 +29,16 @@ def fix_nesting(md):
         "· [Lihat detail](modul.md)\n:::\n", "· [Lihat detail](modul.md)\n::::\n")
 
 
+import sys
+# Normal runs only redo the catalog indexes; --pages also rewrites the hand-written pages below.
+ALL = "--pages" in sys.argv
+if not ALL:
+    PAGES = ["repositori.md", "tutorial.md"]
+
 # 1. Indonesian copies.
 for page in PAGES:
     src = open(page, encoding="utf8").read()
-    if "**Bahasa Indonesia**" in src or "· **English**" in src:
+    if "**Bahasa Indonesia**" in src or "[Bahasa Indonesia](id/" in src:
         continue  # already processed in an earlier run
     open(os.path.join("id", page), "w", encoding="utf8").write(to_id(fix_nesting(src), page))
 
@@ -385,6 +391,7 @@ EN["contact.md"] = f"""# Contact
 > Life without biodiversity is nothing. Preserve nature, preserve the future.
 """
 
-for page, md in EN.items():
-    open(page, "w", encoding="utf8").write(md)
-print("English pages:", len(EN) + 2, "· Indonesian copies:", len(os.listdir("id")))
+if ALL:
+    for page, md in EN.items():
+        open(page, "w", encoding="utf8").write(md)
+print("catalog indexes in both languages" + (f", {len(EN)} English pages" if ALL else ""))

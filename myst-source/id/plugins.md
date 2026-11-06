@@ -4,6 +4,18 @@
 
 Plugin yang saya buat untuk GeoLibre dan QGIS.
 
+## Cara kerjanya bersama
+
+```{mermaid}
+flowchart LR
+  gbif[(GBIF API)] --> p1(GBIF Data plugin)
+  inat[(iNaturalist API)] --> p2(iNaturalist Extractor)
+  p1 --> map[Peta GeoLibre]
+  p2 --> map
+  map --> lc(Layout Composer)
+  lc --> out[Peta siap cetak: PNG, PDF, GeoPDF]
+```
+
 ## Statistik pengguna
 
 Data diambil langsung dari registri plugin GeoLibre setiap kali halaman ini dibuka.
@@ -16,19 +28,31 @@ Data diambil langsung dari registri plugin GeoLibre setiap kali halaman ini dibu
 
 ### Layout Composer
 
-![Antarmuka Layout Composer](../assets/projects/layout-composer.png)
+:::{figure} ../assets/projects/layout-composer.png
+:label: fig-lc
+Ruang kerja Layout Composer di GeoLibre.
+:::
 
 Perancang tata letak kartografi untuk GeoLibre: peta siap cetak dengan layer, grid, inset, legenda, dan ekspor.
 
-[Halaman resmi](https://plugins.geolibre.app/catalog/layout-composer/) · [Panduan di web](../panduan/layout-composer.md) · [README lengkap](../repos/alat/layout-composer.md) · [Repositori](https://github.com/Defani/Layout-Composer) · [Baca panduan](/reader.html?file=/perpus/panduan-layout-composer.pdf&title=Panduan%20Lengkap%20Layout%20Composer)
+[Halaman resmi](https://plugins.geolibre.app/catalog/layout-composer/) · [README lengkap](../repos/alat/layout-composer.md) · [Repositori](https://github.com/Defani/Layout-Composer) · [Baca panduan](/reader.html?file=/perpus/panduan-layout-composer.pdf&title=Panduan%20Lengkap%20Layout%20Composer)
 
 ### GBIF Data
 
-![Peta titik kejadian GBIF](../assets/plugins/gbif-points.png)
+:::{figure} ../assets/plugins/gbif-points.png
+:label: fig-gbif-points
+Kejadian GBIF sebagai titik.
+:::
 
-![Peta kepadatan kejadian GBIF](../assets/plugins/gbif-density.png)
+:::{figure} ../assets/plugins/gbif-density.png
+:label: fig-gbif-density
+Kejadian GBIF sebagai layer kepadatan.
+:::
 
-![Popup dan sitasi data GBIF](../assets/plugins/gbif-popup-and-citation.png)
+:::{figure} ../assets/plugins/gbif-popup-and-citation.png
+:label: fig-gbif-popup
+Popup rekaman beserta sitasinya.
+:::
 
 Mengambil data kejadian (occurrence) dari GBIF langsung ke peta GeoLibre.
 
