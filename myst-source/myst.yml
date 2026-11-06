@@ -20,8 +20,6 @@ project:
       email: defaniarman@gmail.com
       github: Defani
       linkedin: https://linkedin.com/in/defaniarmanalfitriansyah
-      affiliations:
-        - Program Studi Kehutanan, Universitas Kuningan
   toc:
     - file: index.md
     - file: projects.md
