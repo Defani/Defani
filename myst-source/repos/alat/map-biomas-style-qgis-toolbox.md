@@ -151,7 +151,7 @@ Penjelasan tech stack, struktur kelas, dan fungsi tiap komponen kode ada di [`do
 
 ## Struktur File
 
-```
+```text
 Map-Biomas-style-QGIS-Toolbox/
 ├── mapbiomas_style_qgis_toolbox.py   # Script Processing utama
 ├── startup.py                         # Script auto-load tombol toolbar
@@ -163,10 +163,10 @@ Map-Biomas-style-QGIS-Toolbox/
 ## Instalasi
 
 Buka menu processing toolbox > pilih logo python >add script to toolbox 
-   <img width="634" height="227" alt="Screenshot 2026-06-06 190217" src="https://github.com/user-attachments/assets/2bfb0210-3deb-4556-9ad8-58eecb2ef6a6" />
+   <img width="634" alt="Screenshot 2026-06-06 190217" src="https://github.com/user-attachments/assets/2bfb0210-3deb-4556-9ad8-58eecb2ef6a6" />
    
 >masukan semua file
-<img width="367" height="481" alt="Screenshot 2026-06-06 190235" src="https://github.com/user-attachments/assets/751cd222-2bfd-4cea-bcf0-07dd480958c8" />
+<img width="367" alt="Screenshot 2026-06-06 190235" src="https://github.com/user-attachments/assets/751cd222-2bfd-4cea-bcf0-07dd480958c8" />
 
 setelah instalasi selesai maka akan muncul menu di panel atas
 

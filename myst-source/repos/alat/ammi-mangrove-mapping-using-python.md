@@ -14,7 +14,7 @@ This notebook demonstrates the implementation of the Automatic Mangrove Map and 
 ![Python](https://img.shields.io/badge/Language-Python%203-yellow)
 
 ---
-<img width="1512" height="1417" alt="download (3)" src="https://github.com/user-attachments/assets/0e9e63b3-a7f4-4fc7-a1ca-5e2e0c04d6cc" />
+<img width="1512" alt="download (3)" src="https://github.com/user-attachments/assets/0e9e63b3-a7f4-4fc7-a1ca-5e2e0c04d6cc" />
 
 ## Overview
 
@@ -123,7 +123,7 @@ The Cloud Score+ mask (`cs_cdf ≥ 0.60`) provides a robust probabilistic cloud 
 
 ## Workflow Summary
 
-```
+```text
 Sentinel-2 SR Collection
         │
         ▼
@@ -351,3 +351,9 @@ If you use or adapt this notebook in academic work, please cite the primary AMMI
 ## License
 
 This notebook is released for academic and educational use. All data access is subject to [Google Earth Engine Terms of Service](https://earthengine.google.com/terms/) and Copernicus Sentinel-2 data policies.
+
+## Notebook
+
+Notebook dari repositori ini, tampil lengkap dengan sel kode dan hasilnya:
+
+- [AMMI (4).ipynb](nb/ammi-mangrove-mapping-using-python--ammi-4.ipynb) · [GitHub](https://github.com/Defani/AMMI-MANGROVE-MAPPING-USING-PYTHON/blob/main/AMMI%20%284%29.ipynb) · [Colab](https://colab.research.google.com/github/Defani/AMMI-MANGROVE-MAPPING-USING-PYTHON/blob/main/AMMI%20%284%29.ipynb)

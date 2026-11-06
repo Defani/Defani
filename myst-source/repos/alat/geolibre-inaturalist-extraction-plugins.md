@@ -6,6 +6,12 @@ Geolibre plugin for Fetches iNaturalist observations and adds them to the map as
 
 [Repositori di GitHub](https://github.com/Defani/Geolibre-Inaturalist-Extraction-Plugins)
 
+:::{iframe} https://web.geolibre.app/
+:width: 100%
+:class: col-page
+Coba langsung: GeoLibre ([Qiusheng Wu](https://github.com/opengeos/GeoLibre)) berjalan di halaman ini. Buka **Plugins → Marketplace**, pasang **iNaturalist Extractor**, atau [buka layar penuh](https://web.geolibre.app/).
+:::
+
 <!-- Badges: shields.io. Static badges need no setup; the "Repo" row is live and shows data once the repository is public. -->
 
 **Plugin**
@@ -63,7 +69,7 @@ This plugin merges the feature set of the [rinat](https://docs.ropensci.org/rina
 R package and the QGIS "iNaturalist Extractor" plugin into GeoLibre's own
 plugin API, so it isn't just a bounding-box fetcher.
 
-<img width="1920" height="1080" alt="Screenshot 2026-09-22 100207" src="https://github.com/user-attachments/assets/f5b6c13d-685c-4daf-8df9-a2545df21f9c" />
+<img width="1920" alt="Screenshot 2026-09-22 100207" src="https://github.com/user-attachments/assets/f5b6c13d-685c-4daf-8df9-a2545df21f9c" />
 
 
 ## What it does
@@ -95,7 +101,7 @@ plugin API, so it isn't just a bounding-box fetcher.
 
 ## Files
 
-```
+```text
 geolibre-inaturalist-extractor/   # the plugin itself (this is what gets published)
   plugin.json                     # manifest (id/name/version must match index.js's exports)
   index.js                        # self-contained ES module (no bundler needed, no imports)

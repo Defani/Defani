@@ -110,7 +110,7 @@ A complete, class-by-class breakdown of every `qgis.core` / `qgis.gui` class, Pr
 
 ## Project structure
 
-```
+```text
 agroforestry_gis_toolkit/
 ├── __init__.py                     # classFactory entry point
 ├── metadata.txt                    # QGIS plugin metadata

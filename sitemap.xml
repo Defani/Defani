@@ -8,13 +8,73 @@
     <loc>http://localhost:3000/projects</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/skripsi</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/skripsi/kata-pengantar</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/skripsi/bab-1</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/skripsi/bab-2</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/skripsi/bab-3</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/skripsi/bab-4</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/skripsi/bab-5</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/skripsi/bab-6</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/skripsi/daftar-pustaka</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/skripsi/lampiran</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/2025-03-29-exploring-mangrove-mapping-with-sentine</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/2025-03-30-ndwi-analysis-using-sentinel-2-in-googl</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/2025-04-01-quick-easy-dem-download-in-qgis-with-op</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/2025-04-30-tutorial-memetakan-sebaran-mangrove-men</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/2025-06-18-mengunduh-citra-satelit-sentinel-2-meng</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/2025-07-15-penginderaan-jarak-jauh-dasar-menggunak</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/2025-07-18-dasar-pengolahan-dem-dalam-bahasa-r</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/2025-08-15-tutorial-analisis-spasial-rata-rata-cur</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/2025-11-23-pembelajaran-mesin-dan-integrasi-data-m</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog/2025-11-30-klasifikasi-tutupan-lahan-berbasis-algo</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/dashboard</loc>
   </url>
   <url>
     <loc>http://localhost:3000/plugins</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/geolibre</loc>
   </url>
   <url>
     <loc>http://localhost:3000/webgis</loc>
@@ -27,9 +87,6 @@
   </url>
   <url>
     <loc>http://localhost:3000/panduan</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/panduan/gbif-data</loc>
   </url>
   <url>
     <loc>http://localhost:3000/repositori</loc>
@@ -212,6 +269,18 @@
     <loc>http://localhost:3000/repos/tutorial/water-body-extraction-workflow-using-r-and-sentine</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/repos/tutorial/rpubs/1343104</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/repos/tutorial/rpubs/1350501</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/repos/tutorial/rpubs/1421387</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/repos/tutorial/rpubs/1421395</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/expertise</loc>
   </url>
   <url>
@@ -231,9 +300,6 @@
   </url>
   <url>
     <loc>http://localhost:3000/id/plugins</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/id/geolibre</loc>
   </url>
   <url>
     <loc>http://localhost:3000/id/webgis</loc>

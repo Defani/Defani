@@ -20,7 +20,7 @@ A QGIS plugin for creating publication-quality scientific raster visualizations 
 > `sha256: e2a1576558ab92017a9500264d3544c36d3743b87016b9783d0b4ba0377bd7fd`
 
 QGIS plugin that produces scientific/publication-style raster visualizations. Built as a few different approaches over time, a standalone dialog window with a full toolkit (colormap gallery, stretch modes, RGB composite, vector overlays, web basemaps, one-shot export), and now a native Layout item for building the same scientific-style colorbar directly inside a QGIS Print Layout. Each approach has been progressively simplified so the same publication-style result is easier to get to. Zero third-party Python dependencies, in every release.
-<img width="1920" height="1080" alt="Screenshot 2026-09-06 130720" src="https://github.com/user-attachments/assets/55033ca7-8904-4ac9-9c1e-2660d490f5b9" />
+<img width="1920" alt="Screenshot 2026-09-06 130720" src="https://github.com/user-attachments/assets/55033ca7-8904-4ac9-9c1e-2660d490f5b9" />
 
 
 **Start with v2.11.2 if you're new here.** It's the easiest way to get a publication-style colorbar: no separate dialog window, no manual export step — it drops straight into QGIS's own Print Layout next to North Arrow/Scale Bar/Legend, reads its colours live off your raster layer's own symbology, and updates instantly through its own "RasterViz" dock panel. The 2.11.x line has mostly been stability/compatibility fixes on top of that (see [What's New](#whats-new) below); v1.4.5 remains available separately for anyone who specifically needs the older standalone toolkit (RGB composite, web basemaps, discrete classification).
@@ -260,27 +260,27 @@ manually:
 
 2. In QGIS, open **Plugins → Manage and Install Plugins…**
 
-  <img width="354" height="182" alt="Screenshot 2026-09-06 125828" src="https://github.com/user-attachments/assets/cd1d83b0-94ce-455b-a79b-cdc912f93200" />
+  <img width="354" alt="Screenshot 2026-09-06 125828" src="https://github.com/user-attachments/assets/cd1d83b0-94ce-455b-a79b-cdc912f93200" />
 
 
 3. Go to the **Install from ZIP** tab, click **…** next to "ZIP file", and browse to the downloaded zip
 
-   <img width="1013" height="749" alt="Screenshot 2026-09-06 131231" src="https://github.com/user-attachments/assets/910f92a0-6009-48b9-ab17-1cdbf5621a73" />
+   <img width="1013" alt="Screenshot 2026-09-06 131231" src="https://github.com/user-attachments/assets/910f92a0-6009-48b9-ab17-1cdbf5621a73" />
 
 
 
 4. Select the file and click **Open** — the path fills in the ZIP file field, then click **Install Plugin**
 
-  <img width="877" height="605" alt="Screenshot 2026-09-06 125959" src="https://github.com/user-attachments/assets/ef596603-1e28-4eec-b627-75eb0cda820a" />
+  <img width="877" alt="Screenshot 2026-09-06 125959" src="https://github.com/user-attachments/assets/ef596603-1e28-4eec-b627-75eb0cda820a" />
 
 
 5. Wait for the green **"Plugin installed successfully"** banner
 
-  <img width="990" height="728" alt="Screenshot 2026-09-06 130028" src="https://github.com/user-attachments/assets/80fbdacf-94e0-4902-8ef4-ff5e6e363bee" />
+  <img width="990" alt="Screenshot 2026-09-06 130028" src="https://github.com/user-attachments/assets/80fbdacf-94e0-4902-8ef4-ff5e6e363bee" />
 
 
 6. How to use?
-   <img width="720" height="382" alt="Screen Recording 2026-09-06 130426" src="https://github.com/user-attachments/assets/78158248-8a00-4bb6-982f-9fb0f048c01f" />
+   <img width="720" alt="Screen Recording 2026-09-06 130426" src="https://github.com/user-attachments/assets/78158248-8a00-4bb6-982f-9fb0f048c01f" />
 
 
 
@@ -359,7 +359,7 @@ GNU General Public License v2.0 or later, see [LICENSE](https://github.com/Defan
 
 ## Citation
 
-```
+```text
 Alfitriansyah, D. A. (2026). RasterViz: Scientific Raster Visualization Plugin for QGIS
 (Version 1.4.5) [Software]. https://github.com/Defani/RasterViz
 ```

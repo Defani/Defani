@@ -165,7 +165,7 @@ erDiagram
 
 ## File Structure
 
-```
+```text
 Esri-Landcover-style-QGIS-Toolbox/
 ├── esri_landcover_style_qgis_toolbox.py   # Main Processing script
 ├── startup_esri_landcover.py              # Toolbar button (optional)

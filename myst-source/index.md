@@ -2,22 +2,36 @@
 
 **English** · [Bahasa Indonesia](id/index.md)
 
-::::{tip} New book: Panduan Praktis SQL DuckDB di GeoLibre
-:::{image} assets/cover-sql-duckdb.png
-:alt: Cover of the book Panduan Praktis SQL DuckDB di GeoLibre
-:width: 150px
-:align: left
-:::
-I have just published a book! Learn spatial SQL from scratch in plain language, practising in GeoLibre, which is free and open source. 420 pages, 26 chapters, 147 SQL examples, real data from Kuningan and West Java. Ebook in PDF + EPUB, written in Indonesian.
-
-**Rp85,000** · [Buy on Mayar](https://modul-gis-defani.myr.id/ebook/tpanduan-praktis-sql-duckdb-di-geolibre) · [Read a sample](/reader.html?file=/perpus/sampel-sql-duckdb-geolibre.pdf&title=Panduan%20Praktis%20SQL%20DuckDB%20di%20GeoLibre%20%28sample%29) · [Details](modul.md)
-::::
-
+::::::{grid} 1 1 2 2
+::::{card}
 :::{image} assets/profile.png
 :alt: Foto Defani Arman Alfitriansyah
-:width: 180px
-:align: left
+:width: 170px
+:align: center
 :::
+
+**Defani Arman Alfitriansyah**
+
+Forester · Remote sensing & GIS · Open-source geospatial tools
+
+Gayo, Aceh Tengah & Bener Meriah, Indonesia
+::::
+::::{card}
+:::{image} assets/cover-sql-duckdb.png
+:alt: Cover of the SQL DuckDB in GeoLibre book
+:width: 140px
+:align: center
+:::
+
+**New book: Panduan Praktis SQL DuckDB di GeoLibre**
+
+I have just published a book! Spatial SQL from scratch in plain language, practised in GeoLibre. 26 chapters, 147 SQL examples, real data from Kuningan and West Java.
+
+Rp85,000 · PDF + EPUB · 420 pages
+
+[Buy on Mayar](https://modul-gis-defani.myr.id/ebook/tpanduan-praktis-sql-duckdb-di-geolibre) · [Read a sample](/reader.html?file=/perpus/sampel-sql-duckdb-geolibre.pdf&title=Panduan%20Praktis%20SQL%20DuckDB%20di%20GeoLibre%20%28sample%29)
+::::
+::::::
 
 I'm a Forestry graduate specializing in remote sensing, forest carbon modeling, ecological modeling, and cloud-based geospatial technology for environmental applications.
 
@@ -30,6 +44,25 @@ I also serve as a GIS & Spatial Modeling Laboratory Assistant, mentoring student
 I build open-source geospatial tools: **RasterViz**, a QGIS plugin for Matplotlib-style raster visualization without coding, used by 1,300+ users worldwide, and the GeoLibre plugins Layout Composer, GBIF Data and iNaturalist Extractor.
 
 As a content creator on Instagram ([@49s.lab](https://www.instagram.com/49s.lab), 6K+ followers), I share practical GIS, remote sensing, and open-source geospatial tutorials. I work with open-source software only, and I'm open to collaboration on forest carbon, sustainability, EUDR, and GIS-based traceability systems.
+
+## Research and writing
+
+::::{grid} 1 1 2 2
+:::{card}
+:link: skripsi.md
+![Cover](assets/skripsi/image1.png)
+
+**Thesis: Pemodelan Simpanan Karbon Mangrove Berbasis Citra Sentinel 2A**
+
+Mangrove carbon stock modelling in the Cipunegara estuary, Subang. Read it as a web book, chapter by chapter, with figures, tables and formulas.
+:::
+:::{card}
+:link: blog.md
+**Blog**
+
+Ten articles moved over from Medium: Google Earth Engine, R, QGIS, mangrove mapping, land cover classification.
+:::
+::::
 
 ## Where I work
 
@@ -50,13 +83,3 @@ As a content creator on Instagram ([@49s.lab](https://www.instagram.com/49s.lab)
 :::
 
 Source: [Global Forest Watch](https://www.globalforestwatch.org/dashboards/country/IDN/), data by Hansen/UMD/Google/USGS/NASA.
-
-:::{aside}
-![Cover of the SQL DuckDB in GeoLibre book](assets/cover-sql-duckdb.png)
-
-**New book: Panduan Praktis SQL DuckDB di GeoLibre**
-
-Rp85,000 · PDF + EPUB · 420 pages
-
-[Buy on Mayar](https://modul-gis-defani.myr.id/ebook/tpanduan-praktis-sql-duckdb-di-geolibre) · [Read a sample](/reader.html?file=/perpus/sampel-sql-duckdb-geolibre.pdf&title=Panduan%20Praktis%20SQL%20DuckDB%20di%20GeoLibre%20%28sample%29)
-:::

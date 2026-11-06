@@ -6,6 +6,12 @@ Cartographic layout designer for GeoLibre
 
 [Repositori di GitHub](https://github.com/Defani/Layout-Composer)
 
+:::{iframe} https://web.geolibre.app/
+:width: 100%
+:class: col-page
+Coba langsung: GeoLibre ([Qiusheng Wu](https://github.com/opengeos/GeoLibre)) berjalan di halaman ini. Buka **Plugins → Marketplace**, pasang **Layout Composer**, atau [buka layar penuh](https://web.geolibre.app/).
+:::
+
 **Cartographic layout designer for [GeoLibre](https://plugins.geolibre.app)**. Design publication-ready maps in a Word-style workspace — map frames, coordinate grids, legends, matplotlib-style color bars, attribute tables and Plotly charts from your layers, Mermaid diagrams, LaTeX formulas, symbols and icon catalogs, GeoPDF export and QGIS template exchange — without leaving GeoLibre.
 
 ![Version](https://img.shields.io/badge/version-1.11.0-0d99ff)

@@ -20,7 +20,7 @@ A no-code Google Earth Engine App for exploring, analyzing, and downloading CHIR
 EE CHIRPS RainMapper is a Google Earth Engine (GEE) App built entirely with the `ui` module, designed to remove the friction of manually processing CHIRPS rainfall data (clipping to a region, summing over time, computing annual averages, and generating trend charts). All processing is handled server-side on GEE and delivered through a browser interface, without requiring the user to write or modify any code.
 
 The app supports drawing a custom Area of Interest (AOI), selecting between CHIRPS Daily or Pentad datasets, running one of three analysis modes, and exporting results as GeoTIFF or chart-derived CSV. The interface is fully bilingual (English/Indonesian) and includes an automatically generated narrative summary comparing the selected period against a historical baseline.
-<img width="1911" height="866" alt="Screenshot 2026-08-22 182354" src="https://github.com/user-attachments/assets/f4efdf6e-7d4d-4dd1-9df9-c01c344dc17d" />
+<img width="1911" alt="Screenshot 2026-08-22 182354" src="https://github.com/user-attachments/assets/f4efdf6e-7d4d-4dd1-9df9-c01c344dc17d" />
 
 ---
 

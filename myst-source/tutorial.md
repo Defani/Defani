@@ -45,13 +45,10 @@ Tutorials and analysis scripts (Google Earth Engine, Python, R) linked to their 
 | [Water-Body-Extraction-Workflow-Using-R-and-Sentinel-2-Imagery](repos/tutorial/water-body-extraction-workflow-using-r-and-sentinel-2-imagery.md) | R |  |
 | [Land-Cover-Classification-Using-Random-Forest](repos/tutorial/land-cover-classification-using-random-forest.md) | R |  |
 | [ESTIMATING-LAND-SURFACE-TEMPERATURE-FROM-LANDSAT-8-SURFACE-REFLECTANCE-USING-R](repos/tutorial/estimating-land-surface-temperature-from-landsat-8-surface-reflectance-using-r.md) | R |  |
-
-R tutorials published on [RPubs](https://rpubs.com/defanii):
-
-- [Analisis Perubahan Luasan Tutupan dan Penggunaan Lahan dengan R dan MapBiomas Indonesia](https://rpubs.com/defanii/1421395)
-- [Animasi Peta Tutupan Lahan IKN Menggunakan R](https://rpubs.com/defanii/1421387)
-- [BuiltUp Mapping Using Sentinel 2A and Terra Package](https://rpubs.com/defanii/1350501)
-- [Pemetaan mangrove](https://rpubs.com/defanii/1343104)
+| [Analisis Perubahan Luasan Tutupan dan Penggunaan Lahan dengan R dan MapBiomas Indonesia](repos/tutorial/rpubs/1421395.md) | R (RPubs) | R Markdown tutorial, first published on RPubs (2026) |
+| [Animasi Peta Tutupan Lahan IKN Menggunakan R](repos/tutorial/rpubs/1421387.md) | R (RPubs) | R Markdown tutorial, first published on RPubs (2026) |
+| [BuiltUp Mapping Using Sentinel 2A and Terra Package](repos/tutorial/rpubs/1350501.md) | R (RPubs) | R Markdown tutorial, first published on RPubs (2025) |
+| [Pemetaan mangrove](repos/tutorial/rpubs/1343104.md) | R (RPubs) | R Markdown tutorial, first published on RPubs (2025) |
 
 ## Other
 

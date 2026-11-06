@@ -1,0 +1,242 @@
+---
+title: BAB V Hasil dan Pembahasan
+short_title: BAB V
+numbering:
+  figure: false
+  table: false
+  equation: true
+---
+
+Bagian dari skripsi *Pemodelan Simpanan Karbon Mangrove Berbasis Citra Sentinel 2A di Muara Sungai Cipunegara, Subang, Jawa Barat* · [Daftar isi](../skripsi.md)
+
+(s5-1-tutupan-mangrove-di-muara-sungai-cipunegara)=
+## 5.1 Tutupan Mangrove di Muara Sungai Cipunegara
+
+1.  **Komposit Citra Bebas Awan**
+
+Penelitian ini menerapkan *Cloud Score+* (CS+) berbasis algoritma *Weakly Supervised Deep Learning* yang mampu mengevaluasi kualitas setiap piksel secara presisi (Pasquarella *et al*., 2023). Proses seleksi piksel awan dioptimalkan menggunakan kanal cs_cdf yang diakses dari dataset Cloud Score+ S2_HARMONIZED V1 pada repositori GEE Data Catalogue. Proses seleksi piksel awan dioptimalkan menggunakan kanal cs_cdf yang diakses dari dataset Cloud Score+ S2_HARMONIZED V1 pada repositori GEE Data Catalogue. Algoritma ini dikonfigurasi menggunakan nilai ambang batas (*threshold*) \>= 0.60, yang secara efektif mengeliminasi sisa gangguan atmosferik dengan tetap mempertahankan piksel yang representatif pada komposit (NIR-SWIR2-Green). Pendekatan ini menghasilkan citra komposit (SWIR, NIR, Red) yang jauh lebih bersih dan optimal untuk analisis lanjutan, sebagaimana ditunjukkan pada gambar 8.
+
+:::{figure} ../assets/skripsi/image9.jpeg
+:width: 100%
+
+Gambar 7. Komparasi Komposit Citra Pra dan Pasca Masking Awan di Muara Sungai Cipunegara
+:::
+
+2.  **Peta Sebaran Mangrove dan Non Mangrove**
+
+Hasil klasifikasi citra Sentinel-2 menunjukkan tingkat akurasi yang tinggi terhadap data latih dan kondisi lapangan, yang ditunjukkan oleh nilai overall accuracy sebesar 95,4% dan koefisien kappa sebesar 94,87%. Nilai tersebut memenuhi kriteria klasifikasi sangat baik berdasarkan standar akurasi menurut Congalton dan Green serta termasuk kategori almost perfect agreement menurut Landis dan Koch. Luas total mangrove hasil klasifikasi di muara Sungai Cipunegara pada tahun 2026 diperoleh sebesar 710,44 ha. Tingkat akurasi klasifikasi ini dipengaruhi oleh penggunaan kelas yang terbatas, yaitu mangrove dan non-mangrove, penentuan titik sampel yang homogen (Dong *et al*., 2020), serta kondisi pasang surut dan persentase tutupan awan saat akuisisi citra (Nguyen *et al*., 2020). Selain itu, penggunaan multi-parameter dengan sensitivitas tinggi terhadap deteksi mangrove pada proses klasifikasi Random Forest berkontribusi pada stabilitas hasil klasifikasi (Dan *et al*., 2016).
+
+Hasil analisis spasial menunjukkan luas mangrove di muara Sungai Cipunegara pada tahun 2026 sebesar 710,44 ha. Luasan tersebut menunjukkan penambahan jika dibandingkan dengan penelitian Sodikin *et al*. (2024) yang melaporkan luas mangrove tahun 2023 sebesar 696 ha. Dengan demikian, dalam rentang waktu tiga tahun terdapat akumulasi penambahan luasan sebesar 14,44 ha atau sekitar 2,07% dari luasan awal. Penambahan tersebut mengindikasikan bahwa ekosistem mangrove di muara Sungai Cipunegara masih mengalami perkembangan dimensi spasial dan ekspansi vegetasi pada area pesisir. Hasil klasifikasi sebaran mangrove di muara Sungai Cipunegara tahun 2026 tersaji pada Gambar 9.
+
+:::{figure} ../assets/skripsi/image10.png
+:width: 100%
+
+Gambar 8. Peta Sebaran Mangrove di Muara Sungai Cipunegara (Hasil Klasifikasi Citra Sentinel 2A)
+:::
+
+Peningkatan luasan mangrove diduga dipengaruhi oleh dua faktor utama. Faktor pertama adalah dominasi genus *Avicennia* pada kawasan penelitian. Penelitian Sodikin *et al* (2024) menunjukkan bahwa mangrove di muara Sungai Cipunegara didominasi oleh *Avicennia marina* dan *Avicennia alba*. Jenis ini dikenal sebagai spesies pionir dengan kemampuan adaptasi tinggi terhadap kondisi lingkungan pesisir yang dinamis, terutama pada substrat berlumpur, salinitas yang bervariasi, serta lahan hasil sedimentasi baru. Kemampuan tersebut menyebabkan *Avicennia* mampu melakukan kolonisasi lebih cepat dibandingkan beberapa jenis mangrove lainnya sehingga mempercepat penambahan tutupan vegetasi.
+
+Faktor kedua berkaitan dengan kesesuaian habitat pada kawasan muara Sungai Cipunegara. Susanto *et al*. (2026) melaporkan bahwa Site-1 yang berada di kawasan muara Sungai Cipunegara memiliki kondisi lingkungan yang sesuai untuk pembentukan dan pengembangan mangrove serta berpotensi dimanfaatkan untuk mempercepat ekspansi spesies *Avicennia*. Temuan tersebut menunjukkan bahwa kondisi biofisik kawasan penelitian mendukung perkembangan alami mangrove. Kombinasi karakteristik habitat yang sesuai, dominasi spesies pionir, serta tingginya sedimentasi di kawasan delta Cipunegara diduga menjadi faktor yang mendorong peningkatan luasan mangrove pada periode 2023--2026.
+
+Berdasarkan hasil survei lapangan dan identifikasi vegetasi yang dilakukan di kawasan mangrove Muara Sungai Cipunegara, ditemukan beberapa jenis mangrove yang mendominasi kawasan tersebut, yaitu *Avicennia marina*, *Avicennia alba, Rhizophora mucronata*, dan *Sonneratia alba*. Hasil observasi menunjukkan bahwa genus *Avicennia* merupakan kelompok yang paling dominan, khususnya *Avicennia marina* dan *Avicennia alba*, yang tersebar luas pada area tanah timbul hasil sedimentasi di sekitar muara sungai (Sodikin *et al*., 2024). Dominansi *Avicennia* dikarenakan kemampuan adaptasinya yang tinggi terhadap substrat lumpur serta kondisi lingkungan estuari yang dipengaruhi pasang surut. Selain itu, ditemukan pula *Rhizophora mucronata* dan *Sonneratia alba* dengan sebaran yang relatif lebih terbatas. Kondisi substrat yang didominasi lumpur dan tingginya suplai sedimen dari aliran Sungai Cipunegara diduga menjadi faktor utama yang mendukung pertumbuhan dan struktur komunitas mangrove di kawasan tersebut (Sodikin *et al*., 2024). Kondisi mangrove di muara sungai Cipunegara ditunjukan di gambar 7.
+
+![](../assets/skripsi/image11.jpeg)![](../assets/skripsi/image12.jpeg)
+
+Gambar 9. Kondisi Mangrove Muara Sungai Cipunegara
+
+(s5-2-simpanan-biomassa-dan-karbon)=
+## 5.2 Simpanan Biomassa dan Karbon
+
+Berdasarkan hasil inventarisasi lapangan pada 25 petak ukur ukur di tahun 2026, ekosistem mangrove di Muara Sungai Cipunegara menunjukkan potensi simpanan karbon yang dinamis. Hasil analisis alometrik memperlihatkan bahwa rata-rata AGB mencapai 170,66 ± 66,15 ton/ha, dengan rentang nilai minimum sebesar 0,54 ton/ha dan maksimum mencapai 324,96 ton/ha. Sejalan dengan hal tersebut, estimasi rata-rata stok karbon murni (*Above Ground Carbon* / AGC) yang dihitung menggunakan faktor konversi 0,47 tercatat sebesar 80,21 ton/ha, dengan rentang mulai dari 0,25 ton/ha hingga titik tertinggi 152,73 ton/ha. Rentang nilai minimum dan maksimum ini menunjukkan adanya heterogenitas pada sebaran jenis dan ukuran DBH antar lokasi pengamatan di lapangan. Secara lebih rinci, perbandingan total biomassa dan simpanan karbon per hektar untuk masing-masing petak pengukuran ditunjukkan pada Gambar 10.
+
+:::{figure} ../assets/skripsi/image13.png
+:width: 100%
+
+Gambar 10. Sebaran Biomassa dan Karbon Pada Petak Pengukuran
+:::
+
+(s5-3-indeks-vegetasi)=
+## 5.3 Indeks Vegetasi
+
+Ekstraksi nilai spektral dari citra Sentinel-2A pada wilayah mangrove Muara Sungai Cipunegara dilakukan untuk menganalisis respons biofisik tajuk, kerapatan kanopi, serta karakteristik reflektansi vegetasi yang berkaitan dengan simpanan karbon. Nilai pada seluruh petak ukur lapangan disajikan pada Gambar 11.
+
+:::{figure} ../assets/skripsi/image14.png
+:width: 100%
+
+Gambar 11. Nilai Reflektansi Indeks Pada 25 Petak Pengukuran
+:::
+
+1.  **NDVI (Normalized Difference Vegetation Index)**
+
+Indeks NDVI secara respon spektral mencerminkan kondisi kerapatan mangrove di muara Sungai Cipunegara. Sebaran spasial nilai NDVI pada kawasan mangrove Muara Sungai Cipunegara ditampilkan pada Gambar 12.
+
+:::{figure} ../assets/skripsi/image15.png
+:width: 100%
+
+Gambar 12. Sebaran NDVI Mangrove Muara Sungai Cipunegara
+:::
+
+Nilai sebaran NDVI pada seluruh populasi mangrove berada pada rentang reflektansi 0,68--1.0. Pemusatan rata-rata yang tinggi dan rentang variasi yang sempit ini mencerminkan kondisi tutupan kanopi yang relatif menutup rapat secara merata di seluruh kawasan penelitian. Profil garis NDVI pada Gambar 12 terlihat stagnan pada dinamikan simpanan karbon, menunjukkan bahwa perbedaan kondisi struktural tegakan antar petak ukur yang secara nyata terlihat di lapangan dalam bentuk variasi kerapatan dan ukuran pohon tidak terefleksikan secara proporsional pada respons spektral indeks ini.
+
+Fenomena mendatarnya kurva NDVI pada rentang nilai tinggi merupakan manifestasi dari keterbatasan saturasi spektral (*spectral saturation*) . Pada ekosistem mangrove dengan indeks luas daun (*Leaf Area Index*) tinggi, reflektansi kanal NIR mencapai nilai jenuh dan tidak lagi berubah secara linier seiring peningkatan kerapatan tegakan, sehingga NDVI tidak mampu membedakan variasi kerapatan dan stok karbon yang sesungguhnya heterogen di bawah kanopi (Tran *et al*., 2022). Karakteristik NDVI yang demikian menjadikannya kurang sensitif sebagai prediktor tunggal dalam kondisi mangrove estuari yang lebat seperti di Muara Sungai Cipunegara.
+
+2.  **IRECI *(Inverted Red Edge Crolophyll Index)***
+
+Indeks IRECI merepresentasikan sebaran klorofil secara spasial yang dihasilkan oleh pantulan kanal Red Edge (Suardana *et al*., 2023). Sebaran spasial nilai IRECI pada kawasan mangrove Muara Sungai Cipunegara ditampilkan pada Gambar 13.
+
+:::{figure} ../assets/skripsi/image16.png
+:width: 100%
+
+Gambar 13. Sebaran IRECI Mangrove Muara Sungai Cipunegara
+:::
+
+Nilai IRECI pada tingkat petak ukur berfluktuasi secara dinamis antara rentang 0,60 hingga 1,97 dengan rata-rata 1,13. Rentang variasi ini jauh lebih lebar dibandingkan NDVI pada populasi pengamatan yang sama, mencerminkan kemampuan IRECI dalam merekam gradasi kandungan klorofil dan kerapatan daun secara lebih halus. Keunggulan ini berasal dari desain matematis IRECI yang mengintegrasikan empat kanal spektral sekaligus NIR, Red, RedEdge1, dan RedEdge2 di mana kanal-kanal tepi merah (*red-edge*) pada rentang 700--740 nm sangat sensitif terhadap perubahan konsentrasi klorofil kanopi yang berkorelasi erat dengan akumulasi biomassa (Blackburn, 1998 ; Suardana *et al*., 2023).
+
+Pada peta sebaran spasial (Gambar 13), nilai IRECI yang lebih tinggi terkonsentrasi pada area mangrove bagian tengah yang memiliki tegakan dewasa dan kerapatan tinggi, sementara nilai yang lebih rendah tampak pada area tepi sungai dan garis pantai yang didominasi tegakan muda atau *Sonneratia alba* berstrata rendah. Pola spasial ini mencerminkan bahwa IRECI mampu merepresentasikan gradasi konsentrasi klorofil kanopi secara spasial, yang pada gilirannya mencerminkan variasi kerapatan tegakan dan kandungan biomassa antar spesies mangrove di kawasan penelitian. Hal ini menyatakan bahwa kanal *red-edge* secara langsung sensitif terhadap konsentrasi klorofil daun, sehingga lebih tepat digunakan sebagai proksi biofisik tegakan dibandingkan indeks berbasis normalisasi NIR/Red konvensional (Suardana *et al*., 2023; Karang *et al*., 2024).
+
+3.  **TRVI (Total Ratio Vegetation Index)**
+
+TRVI *(Total Ratio Vegetation Index)* indeks vegetasi yang dirumuskan untuk meningkatkan akurasi estimasi tutupan vegetasi dengan cara mengurangi pengaruh latar belakang tanah (Fadaei *et al*., 2012). Sebaran spasial nilai TRVI pada kawasan mangrove Muara Sungai Cipunegara ditampilkan pada Gambar 14.
+
+:::{figure} ../assets/skripsi/image17.png
+:width: 100%
+
+Gambar 14. Sebaran TRVI Mangrove Muara Cipunegara
+:::
+
+Indeks TRVI menghasilkan rentang nilai yang paling lebar di antara ketiga indeks, yaitu mulai dari 2,29 hingga 33,21 pada seluruh area mangrove, sedangkan pada petak ukur pengamatan lapangan nilai TRVI berada pada rentang 2,63 hingga 6,72 dengan rata-rata 4,67. Pola pergerakan grafik lini TRVI pada Gambar 12 menunjukkan tren yang selaras dengan kecenderungan peningkatan biomassa, mengindikasikan bahwa transformasi akar kuadrat dari rasio NIR/Red pada TRVI mampu mengekstraksi informasi struktural kanopi di luar apa yang dapat ditangkap oleh normalisasi sederhana NDVI.
+
+Meskipun demikian, pada area mangrove yang berbatasan langsung dengan air atau garis pantai, TRVI menunjukkan respon deviasi yang lebih tinggi dibandingkan kedua indeks lainnya. Kondisi ini disebabkan oleh sensitivitas operasi transformasi akar kuadrat pada TRVI terhadap faktor gangguan latar belakang (*background noise*) berupa substrat lumpur basah dan genangan pasang surut, yang menurunkan nilai reflektansi Red sehingga membuat rasio NIR/Red secara tidak proporsional. Karakteristik ini mencerminkan keterbatasan TRVI dalam membedakan kontribusi spektral vegetasi dari substrat hidrologis pada piksel-piksel tepian ekosistem mangrove, sebagaimana yang dijelaskan oleh Fadaei *et al*. (2012) bahwa TRVI dirancang terutama untuk kondisi lahan kering dan semi-arid, sehingga perlu dilakukan kajian lanjutan terhadap perilakunya pada substrat estuari tropis.
+
+Secara keseluruhan, ketiga indeks menunjukkan karakteristik respons spektral yang berbeda terhadap variasi struktural tegakan mangrove di muara Sungai Cipunegara. NDVI mencerminkan kehijauan umum kanopi namun rentan jenuh pada tutupan rapat, IRECI merekam gradasi kandungan klorofil dengan sensitivitas tinggi melalui integrasi kanal *red-edge*, sementara TRVI merefleksikan rasio struktural NIR/Red dengan jangkauan nilai lebih lebar namun rentan terhadap gangguan substrat hidrologis. Karakteristik masing-masing indeks ini menjadi dasar evaluasi performa komparatif dalam pembangunan model estimasi simpanan karbon yang dibahas pada subbab berikutnya.
+
+(s5-4-model-simpanan-karbon)=
+## 5.4 Model Simpanan Karbon
+
+1.  **Persamaan Matematis dan Koefisien Model**
+
+Pemodelan simpanan karbon mangrove di muara sungai Cipunegara menghasilkan enam persamaan matematis regresi linier yang terdiri dari tiga model prediktor tunggal dan tiga model prediktor ganda. Seluruh koefisien model diperoleh melalui proses estimasi menggunakan fungsi LinearRegression() pada pustaka Scikit-learn (Pedregosa *et al*., 2011), dengan data latih sebanyak 17 petak ukur (70%) dari total 25 sampel. Rangkuman seluruh persamaan beserta metrik evaluasi pada subset pengujian (8 petak ukur, 30%) disajikan pada Tabel 10.
+
+| Persamaan                                      | R²    | RMSE   |
+|:-----------------------------------------------|:------|--------|
+| AGC = 321,7727(NDVI) − 209,2286                | 0,345 | 31,473 |
+| AGC = 77,9298(IRECI) − 7,2491                  | 0,739 | 19,885 |
+| AGC = 15,6557(TRVI) + 7,8132                   | 0,429 | 29,398 |
+| AGC = 13,8548(NDVI) + 75,4039(IRECI) − 16,8688 | 0,735 | 20,035 |
+| AGC = 252,0041(NDVI) + 3,8904(TRVI) − 164,4373 | 0,381 | 30,601 |
+| AGC = 81,6197(IRECI) − 1,0512(TRVI) − 6,5443   | 0,743 | 19,724 |
+
+**Tabel 10. Persamaan Matematis Model Simapanan Karbon**
+
+Pada penggunaan indeks tunggal, model berbasis IRECI menunjukkan kinerja yang paling unggul dengan nilai R² sebesar 0,739 dan RMSE sebesar 19,885 ton/ha, jauh melampaui kemampuan indeks TRVI (R² = 0,429; RMSE = 29,398 ton/ha) dan NDVI (R² = 0,345; RMSE = 31,473 ton/ha). Performa IRECI secara tunggal didukung oleh temuan Karang *et al* (2024) dimana indeks ini dapat menghasilkan prediksi tertinggi (R{sup}`2` 0.76) pada hutan mangrove dengan dominansi *Avicennia marina.* Rendahnya performa NDVI mengonfirmasi keterbatasan saturasi spektral yang telah diidentifikasi pada variasi nilai NDVI yang sempit pada ekosistem mangrove rapat tidak mampu menangkap dinamika simpanan karbon yang sesungguhnya heterogen. Sementara itu, pada penerapan kombinasi ganda, penggabungan indeks IRECI dan TRVI menghasilkan performa terbaik secara keseluruhan dengan R² = 0,743 dan RMSE = 19,724 ton/ha. Dominasi indeks IRECI pada hasil pemodelan ini mengonfirmasi bahwa pemanfaatan kanal *Red-Edge* pada citra Sentinel-2A sangat sensitif dan efektif dalam mendeteksi kerapatan kanopi dan kandungan biomassa mangrove, sebagaimana dilaporkan oleh Suardana *et al*. (2023) dan Thoha *et al*. (2025).
+
+**2. Evaluasi Model**
+
+Evaluasi performa dari enam skenario pemodelan regresi linierterdiri dari tiga indeks tunggal (NDVI, IRECI, TRVI) dan tiga kombinasi indeks ganda divisualisasikan melalui grafik *scatterplot* yang membandingkan nilai prediksi simpanan karbon dengan nilai aktual dari data lapangan (Gambar 11.). Berdasarkan grafik komparasi tersebut, terlihat pola yang konsisten bahwa penggunaan indeks ganda (*Double Index*) memberikan akurasi prediktif (*Coefficient of Determination* / R2) yang lebih tinggi (0,743) dibandingkan model indeks tunggal (*Single Index*). Pada petak ukur model tunggal NDVI, sebaran titik data uji (*test set*) terlihat menyebar dan menyimpang jauh dari garis ideal 1:1. Fenomena ini mengonfirmasi kelemahan fundamental NDVI yang rentan mengalami saturasi (kejenuhan sinyal optis) saat merekam tajuk hutan yang sangat rapat dan berdaun lebat.
+
+:::{figure} ../assets/skripsi/image18.png
+:width: 100%
+
+Gambar 15. Komparasi Performa Model
+:::
+
+Berdasarkan grafik komparasi tersebut, terlihat pola yang konsisten bahwa penggunaan indeks ganda (*Double Index*) memberikan akurasi prediktif yang lebih tinggi dibandingkan model indeks tunggal (*Single Index*). Pada model tunggal NDVI, sebaran titik data uji (*test set*) terlihat menyebar dan menyimpang jauh dari garis ideal 1:1, menghasilkan RMSE tertinggi sebesar 31,473 ton/ha. Fenomena ini mengonfirmasi kelemahan fundamental NDVI yang rentan mengalami saturasi (*kejenuhan sinyal optis*) saat merekam tajuk hutan yang sangat rapat dan berdaun lebat (Tran *et al*., 2022).
+
+Berdasarkan hasil komparasi seluruh model, ditentukan bahwa model terbaik yang dihasilkan dalam penelitian ini dapat didefinisikan sebagai berikut:
+
+$$AGC\  = 81,6197\left( \frac{\rho\ NIR - \text{ ρ Red }}{\left( \frac{\rho\text{ RedEdge }1}{\text{ RedEdge }2} \right)} \right) - \ 1,0512\left( \sqrt{\frac{\rho\ NIR}{\rho\text{ Red }}} \right) - \ 6,5443$$
+
+Keterangan:
+
+$\rho$ : Nilai reflektansi
+
+AGC : Simpanan karbon di atas permukaan (ton/ha)
+
+NIR : Kanal 8 citra Sentinel 2A
+
+Red : Kanal 4 citra Sentinel 2A
+
+RedEdge1 : Kanal 5 citra Sentinel 2A
+
+RedEdge 2 : Kanal 6 citra Sentinel 2A
+
+−6,5443 :Konstanta Model
+
+Jika model didefinisikan pada urutan kanal asli Sentinel2A maka model dapat didefinisikan sebagai berikut:
+
+$$AGC\ Mangrove = 81,6197\left( \frac{B8 - B4}{B5/B6} \right) - 1,0512\left( \sqrt{\frac{B8}{B4}} \right) - 6,5443$$
+
+Keterangan :
+
+B8 : Saluran inframerah berada pada urutan 8 pada sensor Sentinel2A
+
+B4 : Saluran merah berada pada urutan 4 pada sensor Sentinel2A
+
+RedEdge1 : Saluran merah turunan 1 pada urutan 5 sensor Sentinel2A
+
+RedEdge2 : Saluran merah turunan 2 pada urutan 6 sensor Sentinel2A
+
+Jika variabel indeks berbentuk data , maka kalkulasi dilakukan pada angka konstanta (-6,5443), koefisien IRECI (81,6197), serta koefisien TRVI (-1,0512) dengan berkas *(file)* data raster maupun kanal asli berformat *.tif* sebagai berikut:
+
+![](../assets/skripsi/image19.png)
+
+1.  **Pengaplikasian Model**
+
+Pada penelitian ini setelah model terbaik terdefinisi, tahapan selanjutnya adalah mengaplikasikan persamaan tersebut pada setiap kanal citra yang dibutuhkan. Citra Sentinel-2A yang digunakan telah melalui proses komposit median pada rentang temporal 1 Januari sampai 5 Mei 2026, melalui proses pemotongan (clip) menggunakan batas spasial tutupan mangrove hasil pemetaan algoritma Random Forest, sehingga kalkulasi nilai estimasi karbon dapat berfokus sepenuhnya pada ekosistem mangrove di lokasi penelitian. Pada penelitian ini, model diaplikasikan menggunakan platform google colaboratory berbasis bahasa python dengan sintaksis sebagai berikut :
+
+```python
+#INPUT KANAL SENTINEL2A
+red = comp.select('B4')
+re1 = comp.select('B5')
+re2 = comp.select('B6')
+nir = comp.select('B8')
+#KALKULASI INDEKS
+trvi  = nir.divide(red).sqrt().rename('TRVI')
+ireci = nir.subtract(red).divide(re1.divide(re2)).rename('IRECI')
+#KALKULASI MODEL
+carbon = (ireci.multiply(81.6197)
+          .add(trvi.multiply(-1.0512))
+          .add(-6.5443)
+          .rename('Carbon'))
+```
+Keterangan :
+
+*comp.select('B')* : Memanggil kanal dari dataset Sentinel2A, 4, 5, 6, merupakan urutan kanal
+
+*.divide* : Operasi aritmatik pada bahasa python untuk pembagian
+
+*.sqrt* : Operasi aritmatik pada bahasa python untuk pengkuadratan
+
+.*multiply* : Operasi aritmatik pada bahasa python untuk pengkalian
+
+.*rename ('')* : Perintah pada bahasa python untuk memberi nama pada file baru hasil kalkulasi kanal
+
+*.add* : Operasi aritmatik pada bahasa python untuk penjumlahan
+
+*=* : Perintah pada bahasa python untuk mendefinisikan suatu variabel maupun proses kalkulasi
+
+*\#* : Sintaksis yang diawali simbol *\#* berperan sebagai keterangan atau catatan, yang tidak akan dieksekusi oleh python sebagai suatu algoritma
+
+Pengaplikasian model matematis pada platform Google colaboratory ini dieksekusi secara daring *(online)* dengan dataset yang bersumber dari Google Earth Engine Data Catalog menggunakan pustaka geemap. Pustaka geemap berperan sebagai penghubung *(connector)* antara platform Google colaboratory dengan dataset serta mesin komputasi Google Earth Engine agar seluruh proses dapat dilakukan di dalam 1 lembar kerja, tapa proses pengunduhan data dan penginstalan perangkat lunak. Hasil visualisasi spasial model simpanan karbon yang dihasilkan ditampilkan pada Gambar 16.
+
+:::{figure} ../assets/skripsi/image20.png
+:width: 100%
+
+Gambar 16. Visualisasi Model Spasial Simpanan Karbon Mangrove
+:::
+
+Muara Sungai Cipunegara
+
+Aplikasi model regresi terhadap kanal-kanal citra mengonversi nilai reflektansi asli menjadi nilai digital baru bertipe kontinu yang merepresentasikan estimasi simpanan karbon dalam satuan ton/ha. Konversi ini terjadi karena nilai reflektansi kanal berperan sebagai variabel prediktor dalam model regresi yang dibangun menggunakan data latih dengan nilai simpanan karbon lapangan sebagai variabel yang telah dinyatakan dalam satuan ton/ha. Dengan demikian, model menduga besaran simpanan karbon mangrove pada seluruh wilayah kajian, termasuk area yang tidak tercakup oleh pengukuran lapangan. Hasil kalkulasi berupa data spasial baru dalam format raster TIFF (.tif) dengan resolusi spasial 10 m, sesuai dengan resolusi spasial citra Sentinel-2A yang digunakan dalam pembangunan model. Pada raster simpanan karbon yang dihasilkan, setiap piksel berukuran 10 m × 10 m merepresentasikan luasan 100 m² dan memuat satu nilai digital yang mencerminkan estimasi simpanan karbon pada area tersebut.
+
+Penerapan model regresi linier berganda dengan persamaan AGC = 81,6197(IRECI) − 1,0512(TRVI) − 6,5443 pada kawasan estuari Muara Sungai Cipunegara menghasilkan rentang estimasi simpanan karbon pada rentang 23,21 ton/ha hingga maksimum 171,16 ton/ha. Rentang estimasi spasial ini menunjukkan deviasi terhadap nilai aktual observasi lapangan (minimum: 0,25 ton/ha; maksimum: 152,73 ton/ha). Model spasial tidak merekam keberadaan karbon pada nilai mendekati nol dan memberikan batas estimasi bawah sekitar 23.21 ton/ha, serta mengekstrapolasi nilai puncak melampaui nilai makasimal pada sampel pengukuran lapangan dengan galat prediksi sebesar 19,724 ton/ha.
+
+Secara ekologis, tingginya kontribusi IRECI dan TRVI dalam model prediksi simpanan karbon mangrove menunjukkan bahwa variasi karbon di kawasan penelitian lebih baik diprediksi dengan informasi kondisi fisiologis vegetasi seperti sebaran krolofil dibandingkan hanya tingkat kerapatan tajuk. Konsentrasi klorofil secara tidak langsung dapat mencerminkan kapasitas fotosintesis dan status gizi nitrogen pada masing masing jenis vegetasi (Gao *et al*., 2024; Qian *et al*., 2021). Hal ini juga sejalan dengan Hartoko *et al*. (2022) yang menemukan bahwa kandungan klorofil-a daun mangrove merupakan fungsi ekologis utama yang mendasari estimasi biomassa dan karbon. Temuan ini diperkuat oleh hasil penelitian Thoha *et al* (2025), Suardana *et al* (2023) yang menyatakan bahwa indeks vegetasi berbasis kanal *NIR* dan *Red* perlu disandingkan dengan indeks berbasis kanal *Red-Edge* untuk menghasilkan model prediksi simpanan karbon mangrove yang akurat. Selain itu, Karang *et al* (2024) mengonfirmasi bahwa pada hutan mangrove dengan mayoritas *Avicennia* indeks IRECI memiliki performa tunggal tertinggi dibandingkan NDVI.
+
+Kapasitas pemodelan ini menunjukkan perbedaan performa jika dikomparasikan dengan kajian spasial skala regional yang dilakukan oleh Susanto *et al*. (2026). Pada penelitian di pesisir utara Kabupaten Subang, Susanto *et al*. (2026) menerapkan algoritma non-linier *Support Vector Machine (SVM Polynomial)* yang mampu mencapai akurasi lebih tinggi sebesar R² = 0,88. Tingginya nilai R² pada studi Santoso *et al* (2026) tersebut dicapai melalui penggunaan indeks hidrologi selain indek vegetasi, yaitu MNDWI dan LSWI yang memperkaya informasi kondisi lapangan lebih detail. Sejalan dengan penelitian Purnamasari *et al* (2021), bahwa akurasi prediksi karbon mangrove yang berbeda dipengaruhi faktor waktu pengambilan sampel, kondisi hidrologis, serta waktu pasang surut. Pendekatan Santoso *et al*. (2026) memiliki keunggulan dalam mendeteksi dan mengoreksi genangan hidrologis pada bentang lahan pesisir berskala luas, namun sangat bergantung pada sensitivitas air sebagai variabel pembantu. Sebaliknya, penelitian di Muara Cipunegara ini mempertahankan performa kanal murni pada sensor optis (IRECI dan TRVI) tanpa input informasi kelembaban serta paremeter hidrologi secara spektral maupun kondisi lapangan.
+
+Jika dibandingkan dengan studi Suardana *et al*. (2023) di Teluk Benoa yang menghasilkan model terbaik IRECI+TRVI dengan RMSE 11,09 Mg/ha (r = 0,95), performa penelitian ini (RMSE = 19,724 ton/ha; R² = 0,743) menunjukkan margin yang lebih besar. Perbedaan ini diduga dipengaruhi oleh ukuran sampel yang lebih kecil (data latih) serta kehadiran *Sonneratia alba* dengan biomassa sangat rendah (P4: AGC = 0,25 ton/ha) yang menciptakan rentang dinamika karbon lebih lebar dan sulit dimodelkan secara linier dengan kombinasi dua prediktor. Meskipun penentuan 25 plot (17 trainning dan 8 testing) titik sampel telah memenuhi kecukupan representasi spektral berdasarkan sebaran kerapatan dan perwakilan jenis pada indeks NDVI menurut penelitian pembanding, kondisi lokasi memperlihatkan bahwa hamparan kanopi yang terekam sangat lebat dan hampir seragam dari citra sering kali memiliki komposisi internal yang heterogen terdapat pencampuran spesies serta variasi ukuran diameter batang. Secara spektral dapat difahami bahwa kanal Red mudah mengalami saturasi optis dan rentan merepresentasikan variasi biomassa yang detail (Huete *et al*., 1988; Gao *et al*., 2024). Secara spasial resolusi 10×10 m tidak dapat mendeteksi variasi kerapatan tegakan batang di bawah naungan dedaunan yang tumpang tindih. Akibatnya, model regresi linier dengan dua prediktor spektral belum mampu merepresentasikan seluruh variasi simpanan karbon secara memadai (R² = 0,743).
+
+Keterbatasan lain berkaitan dengan input kanal pada model yang dikembangkan. Model terbaik dalam penelitian ini memanfaatkan indeks vegetasi berbasis kanal *red edge* (IRECI), sehingga penerapannya secara langsung hanya dapat dilakukan pada wahana penginderaan jauh yang dilengkapi dengan kanal *red edge*, seperti Sentinel-2 MSI (ESA, 2015), PlanetScope SuperDove dengan band RE1 dan RE2, serta RapidEye yang memiliki satu kanal *red edge* pada panjang gelombang sekitar 710 nm. Sebaliknya, model ini tidak dapat diaplikasikan langsung pada citra seri Landsat (Landsat 5 TM, Landsat 7 ETM+, Landsat 8 OLI, maupun Landsat 9 OLI-2) yang tidak memiliki kanal *red edge* dalam konfigurasi bandnya (USGS, 2019), sehingga penggunaan indeks pengganti berbasis NIR dan Red seperti NDVI atau TRVI diperlukan apabila analisis hendak diperluas ke arsip citra Landsat dengan konsekuensi penurunan akurasi estimasi karbon. Keterbatasan temporal juga perlu diperhatikan: Sentinel-2A diluncurkan pada Juni 2015 dan Sentinel-2B pada Maret 2017 (ESA, 2015), sehingga analisis multitemporal berbasis model ini hanya dapat mencakup rentang waktu mulai dari tahun 2015.
+
+Pengembangan model spasial berbasis regresi linier terbimbing pada penelitian ini menghasilkan model matematis yang praktis diaplikasikan dalam inventarisasi karbon mangrove di kawasan Muara Sungai Cipunegara, meskipun capaian akurasi prediktifnya sebesar R² = 0,743 belum menyentuh standar koefisien pemodelan performa tinggi (R² ≥ 0,8). Dalam pengaplikasiannya, persamaan AGC = 81,6197(IRECI) − 1,0512(TRVI) − 6,5443 dapat diimplementasikan sebagai alat prediktor tahap awal untuk mengestimasi cadangan karbon secara cepat di kawasan tersebut sebelum tersedianya model terkalibrasi yang lebih presisi. Lebih dari itu, penelitian ini berkontribusi secara metodologis dengan mengonfirmasi penggunaan kanal *Red-Edge* Sentinel-2A dibandingkan indeks berbasis normalisasi NIR/Red konvensional untuk konteks mangrove estuari tropis yang rapat dan heterogen. Berdasarkan komparasi performa dengan studi pembanding, dapat disimpulkan bawa untuk memprediksi simpanan karbon di muara Sungai Cipunegara memerlukan penelitian lanjutan dengan menambah jumlah sampel, merubah penempatan sampel sesuai kanal *RedEdge*, serta menambah variabel prediktor seperti indeks hidrologi, kelembaban, dengan tetap mempertahankan indeks berbasis kanal Red -edge sebagai prediktor utama dalam memberikan informasi biofisik yang lebih detail.

@@ -6,6 +6,12 @@ Fetch georeferenced occurrence records from the [Global Biodiversity Information
 
 [Repositori di GitHub](https://github.com/Defani/GBIF-Data)
 
+:::{iframe} https://web.geolibre.app/
+:width: 100%
+:class: col-page
+Coba langsung: GeoLibre ([Qiusheng Wu](https://github.com/opengeos/GeoLibre)) berjalan di halaman ini. Buka **Plugins → Marketplace**, pasang **GBIF Data**, atau [buka layar penuh](https://web.geolibre.app/).
+:::
+
 ![version](https://img.shields.io/badge/version-1.1.0-2e7d32)
 ![GeoLibre](https://img.shields.io/badge/GeoLibre-%E2%89%A5%203.0.0-2e7d32)
 ![renderer](https://img.shields.io/badge/renderer-MapLibre-396cb2)
@@ -286,7 +292,7 @@ Other details:
 
 ## Repository layout
 
-```
+```text
 GBIF-Data/
 ├── geolibre-gbif-data/          # the plugin (zip these three files)
 │   ├── plugin.json              # manifest: id, version, entry, style, engines

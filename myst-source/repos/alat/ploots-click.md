@@ -448,7 +448,7 @@ flowchart TD
 
 ## Project structure
 
-```
+```r
 .
 ├── index.html                     # App shell, styling, <script>/<link> tags, splash screen
 ├── sw.js                          # Service worker (network-first cache, so the app also opens offline)

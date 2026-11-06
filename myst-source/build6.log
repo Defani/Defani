@@ -1,0 +1,50 @@
+building myst-cli session with API URL: https://api.mystmd.org
+🍡 Execution parallelism set to: 7
+🌎 Building MyST site
+Building the base site.
+To set a baseurl (e.g. GitHub pages) use "BASE_URL" environment variable.
+📖 Built index.md in 35 ms.
+📖 Built projects.md in 34 ms.
+📖 Built plugins.md in 34 ms.
+📖 Built webgis.md in 34 ms.
+📖 Built expertise.md in 34 ms.
+📖 Built tools.md in 34 ms.
+📖 Built modul.md in 34 ms.
+📖 Built repositories.md in 34 ms.
+📖 Built contact.md in 34 ms.
+📚 Built 9 pages for project in 982 ms.
+
+
+	✨✨✨  Starting Book Theme  ✨✨✨
+
+
+
+🔌 Server started on port 3000!  🥳 🎉
+
+
+	👉  http://localhost:3000  👈
+
+
+💌 GET  /projects 200 - - 95.950 ms
+GET /plugins 200 - - 77.182 ms
+GET / 200 - - 99.785 ms
+GET /webgis 200 - - 101.361 ms
+GET /expertise 200 - - 107.357 ms
+💌 GET  /repositories 200 - - 28.026 ms
+GET /tools 200 - - 29.574 ms
+GET /contact 200 - - 41.197 ms
+GET /modul 200 - - 37.703 ms
+GET /index.json 200 - - 39.693 ms
+💌 GET  /projects.json 200 - - 18.205 ms
+GET /webgis.json 200 - - 15.045 ms
+GET /expertise.json 200 - - 14.747 ms
+GET /plugins.json 200 - - 17.982 ms
+💌 GET  /tools.json 200 - - 13.639 ms
+💌 GET  /robots.txt 200 - - 2.156 ms
+💌 GET  /sitemap.xml 200 - - 8.498 ms
+GET /repositories.json 200 - - 26.668 ms
+GET /modul.json 200 - - 27.651 ms
+💌 GET  /contact.json 200 - - 25.698 ms
+GET /myst-theme.css 200 - - 20.925 ms
+💌 GET  /sitemap_style.xsl 200 - - 1.441 ms
+💌 GET  /favicon.ico 200 - - 11.841 ms
