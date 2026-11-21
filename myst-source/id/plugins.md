@@ -72,6 +72,17 @@ Mengambil observasi iNaturalist dan menambahkannya ke peta sebagai layer GeoJSON
 
 [Halaman resmi](https://plugins.geolibre.app/catalog/geolibre-inaturalist-extractor/) · [README lengkap](../repos/alat/geolibre-inaturalist-extraction-plugins.md) · [Repositori](https://github.com/Defani/Geolibre-Inaturalist-Extraction-Plugins)
 
+### Terrio Toolbox
+
+:::{figure} ../assets/tutorial/terrio-toolbox/06-ndvi.jpg
+:label: fig-terrio-id
+Terrio Toolbox di sisi kanan: Raster Calculator ala ArcMap menghitung NDVI Sentinel-2.
+:::
+
+Panel geoprocessing ala ArcGIS Pro untuk GeoLibre, menempel di kanan seperti ArcToolbox: 36 tool raster dan vektor (Clip, Buffer, Slope, Viewshed, Reclassify, Zonal Statistics, Raster To ASCII, dan lainnya) serta Raster Calculator dengan Con, SetNull, dan Float. Semuanya berjalan di browser dengan [terrio-js](https://terrio.dev) WebAssembly.
+
+[Tutorial dengan tangkapan layar](../tutorial/terrio-toolbox.md) · [Repositori](https://github.com/Defani/geolibre-terrio-toolbox) · [Unduh](https://github.com/Defani/geolibre-terrio-toolbox/releases/latest)
+
 ### Tentang GeoLibre
 
 [GeoLibre](https://geolibre.app) bukan buatan saya. GeoLibre dibuat dan dikelola oleh [Qiusheng Wu](https://github.com/giswqs) ([ORCID 0000-0001-5437-4073](https://orcid.org/0000-0001-5437-4073)), University of Tennessee, Knoxville, di bawah organisasi [opengeos](https://github.com/opengeos), dan dirilis dengan [Lisensi MIT](https://github.com/opengeos/GeoLibre/blob/main/LICENSE). Saya berkontribusi lewat plugin untuk ekosistemnya (plugin di halaman ini).

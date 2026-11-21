@@ -72,6 +72,17 @@ Fetches iNaturalist observations and adds them to the map as a GeoJSON layer.
 
 [Official page](https://plugins.geolibre.app/catalog/geolibre-inaturalist-extractor/) · [Full README](repos/alat/geolibre-inaturalist-extraction-plugins.md) · [Repository](https://github.com/Defani/Geolibre-Inaturalist-Extraction-Plugins)
 
+### Terrio Toolbox
+
+:::{figure} assets/tutorial/terrio-toolbox/06-ndvi.jpg
+:label: fig-terrio
+Terrio Toolbox docked on the right: an ArcMap-style Raster Calculator computing NDVI on Sentinel-2.
+:::
+
+An ArcGIS Pro-style geoprocessing pane for GeoLibre, docked on the right like ArcToolbox: 36 raster and vector tools (Clip, Buffer, Slope, Viewshed, Reclassify, Zonal Statistics, Raster To ASCII and more) and a Raster Calculator with Con, SetNull and Float, all running in the browser on [terrio-js](https://terrio.dev) WebAssembly.
+
+[Tutorial with screenshots](tutorial/terrio-toolbox.md) · [Repository](https://github.com/Defani/geolibre-terrio-toolbox) · [Download](https://github.com/Defani/geolibre-terrio-toolbox/releases/latest)
+
 ### About GeoLibre
 
 [GeoLibre](https://geolibre.app) is not my software. It is created and maintained by [Qiusheng Wu](https://github.com/giswqs) ([ORCID 0000-0001-5437-4073](https://orcid.org/0000-0001-5437-4073)), University of Tennessee, Knoxville, under the [opengeos](https://github.com/opengeos) organisation, and released under the [MIT License](https://github.com/opengeos/GeoLibre/blob/main/LICENSE). I contribute plugins to its ecosystem (the plugins on this page).

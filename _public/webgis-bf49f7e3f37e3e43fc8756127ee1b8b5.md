@@ -1,0 +1,59 @@
+# Aplikasi web
+
+[English](../webgis.md) · **Bahasa Indonesia**
+
+Aplikasi dan dokumentasi yang saya buat dan berjalan langsung di GitHub Pages, tanpa server dan tanpa akun.
+
+## Ploots Click
+
+Pembuat grafik statis untuk figur siap publikasi, dengan ekspor PNG atau SVG kualitas cetak. Semua berjalan di browser.
+
+[Buka Ploots Click](https://defani.github.io/Ploots-click/) · [Repositori](https://github.com/Defani/Ploots-click)
+
+:::{iframe} https://defani.github.io/Ploots-click/
+:width: 100%
+:::
+
+## Winrock Sample Plot Calculator
+
+Kalkulator plot sampel Winrock versi web, untuk menghitung jumlah plot yang dibutuhkan dalam inventarisasi karbon.
+
+[Buka kalkulator](https://defani.github.io/winrock-sample-plot-calculator-web/) · [Repositori](https://github.com/Defani/winrock-sample-plot-calculator-web)
+
+:::{iframe} https://defani.github.io/winrock-sample-plot-calculator-web/
+:width: 100%
+:::
+
+## GEEDEF Land Cover Classification Tools
+
+Panduan dan tutorial lengkap GEEDEF V3.1, alat klasifikasi tutupan lahan interaktif di Google Earth Engine.
+
+[Buka panduan](https://defani.github.io/GEEDEF-Land-Cover-Classification-Tools/) · [Repositori](https://github.com/Defani/GEEDEF-Land-Cover-Classification-Tools)
+
+## RasterViz
+
+Situs dokumentasi RasterViz, plugin QGIS untuk visualisasi raster ilmiah bergaya Matplotlib.
+
+[Buka situs RasterViz](https://defani.github.io/RasterViz/) · [Repositori](https://github.com/Defani/RasterViz)
+
+## Teknik threshold, reclassify, masking, dan clamping raster di R
+
+Tutorial empat pendekatan pengolahan raster kontinu yang sering dianggap sama, dengan package terra.
+
+[Buka tutorial](https://defani.github.io/raster-logic-terra-r/) · [Repositori](https://github.com/Defani/raster-logic-terra-r)
+
+## Skrip Google Earth Engine
+
+Skrip yang bisa langsung dibuka dan dijalankan di Google Earth Engine Code Editor (perlu akun Earth Engine).
+
+| Skrip | Buka di GEE | Tutorial |
+| --- | --- | --- |
+| EE Spectral Exploration | [Code Editor](https://code.earthengine.google.com/855c2692093e0ff2901447b2b9cb7814) | [README](../repos/tutorial/ee-spectral-exploration.md) |
+| GEEDEF Land Cover Classification | [Code Editor](https://code.earthengine.google.com/328e48a66c1f2b0a9268cbce3327b9df) | [README](../repos/alat/geedef-land-cover-classification-tools.md) |
+| Klasifikasi tutupan lahan Random Forest multi-indeks | [Code Editor](https://code.earthengine.google.com/cdb5d139bd16afd994164327997cf0ae) | [README](../repos/tutorial/land-cover-classification-random-forest-multi-index.md) |
+| Unduh MapBiomas Indonesia | [Code Editor](https://code.earthengine.google.com/5c832c9e8a9b6b6af80ea73184d4a3fd) | [README](../repos/tutorial/download-map-biomas-land-cover-indonesia-gee.md) |
+| Unduh Landsat 8 SR | [Code Editor](https://code.earthengine.google.com/4ac276892842c267f1e13843fdbe781d) | [README](../repos/tutorial/download-landsat-8-sr-google-earth-engine.md) |
+| Enhanced Vegetation Index (EVI) | [Code Editor](https://code.earthengine.google.com/b58ebee2a304369f43d1fec06055ace4) | [README](../repos/tutorial/enhanced-vegetation-index-gee.md) |
+| NDRE Sentinel-2 | [Code Editor](https://code.earthengine.google.com/0768d94e134507a8d134a0232498b0d7) | [README](../repos/tutorial/normalized-difference-red-edge-index-gee.md) |
+| Kebakaran hutan dATBI | [Code Editor](https://code.earthengine.google.com/330ea07830bdf414b5f28e05baa426f6) | [README](../repos/tutorial/kebakaran-hutan-atbi-gee.md) |
+| NBR karhutla Gunung Lawu | [Code Editor](https://code.earthengine.google.com/457addfc0dcb9d8e840be1ac7d5e2c4d) | [README](../repos/tutorial/nbr-karhutla-gunung-lawu-gee.md) |

@@ -50,6 +50,7 @@ project:
           hidden: true
     - file: tutorial.md
       children:
+        - file: tutorial/terrio-toolbox.md
         - pattern: repos/tutorial/*.md
         - pattern: repos/tutorial/rpubs/*.md
         - pattern: repos/tutorial/nb/*.ipynb

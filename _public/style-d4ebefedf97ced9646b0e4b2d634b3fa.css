@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=block");
+
+
+/* Round profile photo */
+img[alt="Foto Defani Arman Alfitriansyah"] { border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover; }
+
+/* Sidebar menu icons (Google Material Symbols) */
+.myst-toc a[href="/"]::before, nav[aria-label] a[href="/"]::before,
+.myst-toc a[href="/projects"]::before, nav[aria-label] a[href="/projects"]::before,
+.myst-toc a[href="/dashboard"]::before, nav[aria-label] a[href="/dashboard"]::before,
+.myst-toc a[href="/plugins"]::before, nav[aria-label] a[href="/plugins"]::before,
+.myst-toc a[href="/geolibre"]::before, nav[aria-label] a[href="/geolibre"]::before,
+.myst-toc a[href="/webgis"]::before, nav[aria-label] a[href="/webgis"]::before,
+.myst-toc a[href="/modul"]::before, nav[aria-label] a[href="/modul"]::before,
+.myst-toc a[href="/perpus"]::before, nav[aria-label] a[href="/perpus"]::before,
+.myst-toc a[href="/panduan"]::before, nav[aria-label] a[href="/panduan"]::before,
+.myst-toc a[href="/repositori"]::before, nav[aria-label] a[href="/repositori"]::before,
+.myst-toc a[href="/tutorial"]::before, nav[aria-label] a[href="/tutorial"]::before,
+.myst-toc a[href="/expertise"]::before, nav[aria-label] a[href="/expertise"]::before,
+.myst-toc a[href="/tools"]::before, nav[aria-label] a[href="/tools"]::before,
+.myst-toc a[href="/skripsi"]::before, nav[aria-label] a[href="/skripsi"]::before,
+.myst-toc a[href="/blog"]::before, nav[aria-label] a[href="/blog"]::before,
+.myst-toc a[href="/contact"]::before, nav[aria-label] a[href="/contact"]::before {
+  font-family: "Material Symbols Outlined"; font-size: 18px; line-height: 1; vertical-align: -4px;
+  margin-right: 8px; font-weight: 400; font-style: normal; display: inline-block;
+}
+.myst-toc a[href="/"]::before, nav[aria-label] a[href="/"]::before { content: "home"; }
+.myst-toc a[href="/projects"]::before, nav[aria-label] a[href="/projects"]::before { content: "rocket_launch"; }
+.myst-toc a[href="/dashboard"]::before, nav[aria-label] a[href="/dashboard"]::before { content: "monitoring"; }
+.myst-toc a[href="/plugins"]::before, nav[aria-label] a[href="/plugins"]::before { content: "extension"; }
+.myst-toc a[href="/geolibre"]::before, nav[aria-label] a[href="/geolibre"]::before { content: "public"; }
+.myst-toc a[href="/webgis"]::before, nav[aria-label] a[href="/webgis"]::before { content: "apps"; }
+.myst-toc a[href="/modul"]::before, nav[aria-label] a[href="/modul"]::before { content: "menu_book"; }
+.myst-toc a[href="/perpus"]::before, nav[aria-label] a[href="/perpus"]::before { content: "local_library"; }
+.myst-toc a[href="/panduan"]::before, nav[aria-label] a[href="/panduan"]::before { content: "description"; }
+.myst-toc a[href="/repositori"]::before, nav[aria-label] a[href="/repositori"]::before { content: "inventory_2"; }
+.myst-toc a[href="/tutorial"]::before, nav[aria-label] a[href="/tutorial"]::before { content: "cast_for_education"; }
+.myst-toc a[href="/expertise"]::before, nav[aria-label] a[href="/expertise"]::before { content: "forest"; }
+.myst-toc a[href="/tools"]::before, nav[aria-label] a[href="/tools"]::before { content: "build"; }
+.myst-toc a[href="/contact"]::before, nav[aria-label] a[href="/contact"]::before { content: "mail"; }
+.myst-toc a[href="/skripsi"]::before, nav[aria-label] a[href="/skripsi"]::before { content: "school"; }
+.myst-toc a[href="/blog"]::before, nav[aria-label] a[href="/blog"]::before { content: "edit_note"; }
+
+/* README and article images keep their proportions (no squashing from a fixed height) */
+article img, .myst-figure img, .myst-content img { max-width: 100%; height: auto !important; }
+
+/* Footer: brand icons in a row, light and dark */
+footer img[src*="simple-icons"] { width: 22px; height: 22px !important; display: inline-block; margin: 0 10px 0 0; opacity: .8; }
+footer img[src*="simple-icons"]:hover { opacity: 1; }
+html.dark footer img[src*="simple-icons"] { filter: invert(1); }
+footer p { margin: .4rem 0; }
+
+/* README screenshots sit inside paragraphs; the theme caps inline images at 1.2em (badge size).
+   Images with an explicit width are screenshots, not badges: show them as blocks. */
+.article p > img[style*="width"], .article p > a img[style*="width"] { max-height: none; display: block; margin: 1rem auto; }
+
+/* Use the full width when a page has no "Contents" outline on the right */
+@media (min-width: 1024px) {
+  .article-grid:not(:has(nav li)):not(:has(> aside)) > *:not(.lg\:sticky) { grid-column: body-start / page-end; }
+}
+
+/* GeoLibre embedded in the plugin sections: wide and tall enough to work in */
+iframe[src*="web.geolibre.app"], iframe[src*="rstudio-pubs-static"] { min-height: 82vh; }
+figure:has(iframe[src*="web.geolibre.app"]) > div, figure:has(iframe[src*="rstudio-pubs-static"]) > div { padding-bottom: 0 !important; height: 82vh; }
+
+/* Code blocks: show the language name */
+.article pre > code[class*="language-"] { display: block; }
+.article div:has(> pre > code[class*="language-"]) { position: relative; }
+
+/* GitHub and LinkedIn as icons at the top right */
+nav a[href="https://github.com/Defani"], nav a[href^="https://linkedin.com/in/defani"] {
+  font-size: 0 !important; width: 22px; height: 22px; padding: 0 !important; margin: 0 6px;
+  background: center / 20px no-repeat; display: inline-block; vertical-align: middle;
+}
+nav a[href="https://github.com/Defani"] { background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/github.svg"); }
+nav a[href^="https://linkedin.com/in/defani"] { background-image: url("https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/linkedin.svg"); }
+html.dark nav a[href="https://github.com/Defani"], html.dark nav a[href^="https://linkedin.com/in/defani"] { filter: invert(1); }

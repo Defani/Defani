@@ -4,6 +4,12 @@
 
 Tutorial dan skrip analisis (Google Earth Engine, Python, R) yang tersambung ke repositori GitHub. Klik judul untuk membaca langkah-langkahnya lengkap dengan gambar dan rumus.
 
+## GeoLibre
+
+| Judul | Bahasa | Keterangan |
+| --- | --- | --- |
+| [Terrio Toolbox: ArcToolbox di GeoLibre](../tutorial/terrio-toolbox.md) | Plugin GeoLibre | Geoprocessing di browser dengan plugin Terrio Toolbox: Slope dari DEMNAS, Raster Calculator ala ArcMap (NDVI, Con) pada Sentinel-2 Sembilang, Raster To ASCII. Lengkap dengan tangkapan layar. |
+
 ## Google Earth Engine
 
 | Judul | Bahasa | Keterangan |
